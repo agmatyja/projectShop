@@ -5,15 +5,17 @@ const loadTestData = async () => {
   const data = [
     {
       id: '21sd42sdsaaf',
-      title: 'How do I get funding for my startup?',
-	  author: "John Doe",
-      price:  20
+      name: 'How do I get funding for my startup?',
+	  description: "John Doe",
+      price:  20,
+	  in_stock: 4
     },
     {
       id: '543fg43gzsd4',
-      title: '10 Brilliant Small Bussiness Ideas',
+      title: 'Brilliant',
 	  author: "Doris Tenebris",
-      price:  30
+      price:  30,
+	  in_stock: 2
     }
   ];
 

@@ -10,6 +10,7 @@ export const getProduct = ({ products }) => products.singleProduct;
 export const getPages = ({ products }) => Math.ceil(products.amount / products.productsPerPage);
 export const getPresentPage = ({ products }) => products.presentPage;
 
+
 /* ACTIONS */
 
 // action name creator
@@ -31,22 +32,26 @@ export const startRequest = () => ({ type: START_REQUEST });
 export const endRequest = () => ({ type: END_REQUEST });
 export const errorRequest = error => ({ error, type: ERROR_REQUEST });
 export const resetRequest = () => ({ type: RESET_REQUEST });
-export const loadPostsByPage = payload => ({ payload, type: LOAD_PRODUCTS_PAGE });
+export const loadProducstsByPage = payload => ({ payload, type: LOAD_PRODUCTS_PAGE });
 
 /* INITIAL STATE */
 
 const initialState = {
-  data: [],
+  data: [{
+    id: 1,
+    name: 'Lorem Ipsum',
+    description: 'Lorem Ipsum',
+    price: 11,
+    in_stock: 4
+    /*...*/
+  }],
   request: {
-    pending: false,
-	error: null,
-    success: null,
+    success: false,
+    error: null,
+    pending: false
   },
-  singleProduct: null,
-  presentPage: 1,
-  amount: 0,
-  productsPerPage: 10
-};
+  cart: [{ productId: 1, quantity: 3}, { productId: 2, quantity: 2}]
+}
 
 /* REDUCER */
 
