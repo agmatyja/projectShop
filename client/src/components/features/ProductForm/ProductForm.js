@@ -16,11 +16,13 @@ class ProductForm extends React.Component {
 
   state = {
     product: {
+      extraInfo: '',
       title: '',
       author: '',
-	  description: 'Lorem ipsum',
+      image: '',
+	    description: 'Lorem ipsum',
       price: 0,
-	  quantity: 0
+	    in_stock: 0
     }
   }
   
@@ -73,6 +75,12 @@ class ProductForm extends React.Component {
           name="author"
         />
 
+        <TextField
+          label="Image"
+          value={product.image}
+          onChange={handleChange}
+          name="image"
+        />
         <SectionTitle>Edit product price</SectionTitle>
 		
         <Editor

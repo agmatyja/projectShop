@@ -8,7 +8,7 @@ import PageTitle from '../../common/PageTitle/PageTitle';
 import { withRouter } from 'react-router-dom';
 import {BASE_URL} from '../../../config';
 
-class SinglePost extends React.Component {
+class SingleProduct extends React.Component {
 
   componentDidMount() {
     const { loadProduct } = this.props;
@@ -38,16 +38,20 @@ class SinglePost extends React.Component {
 }
 
 
-SinglePost.propTypes = {
-  post: PropTypes.shape({
+SingleProduct.propTypes = {
+  product: PropTypes.shape({
     id: PropTypes.string.isRequired,
+    extraInfo: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
-	author: PropTypes.string.isRequired,
-    content: PropTypes.string.isRequired,
+	  author: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+    in_stock: PropTypes.number.isRequired,
   }),
-  loadPost: PropTypes.func.isRequired,
+  loadProduct: PropTypes.func.isRequired,
   id: PropTypes.string
 };
 
-//export default SinglePost;
-export default withRouter(props => <SinglePost {...props}/>);
+//export default SingleProduct;
+export default withRouter(props => <SingleProduct {...props}/>);

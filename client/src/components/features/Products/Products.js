@@ -43,9 +43,13 @@ Products.propTypes = {
   products: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
+      extraInfo: PropTypes.string.isRequired,
       title: PropTypes.string.isRequired,
-	  author: PropTypes.string.isRequired,
+	    author: PropTypes.string.isRequired,
+      image: PropTypes.string.isRequired,
+      description: PropTypes.string.isRequired,
       price: PropTypes.number.isRequired,
+      in_stock: PropTypes.number.isRequired,
     })
   ),
   loadProductsByPage: PropTypes.func.isRequired,

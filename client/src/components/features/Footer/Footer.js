@@ -6,9 +6,10 @@ class Footer extends React.Component {
 
 state = {
   links: [
+    'Made by Agnieszka Matyja',
     { path: '/', title: 'Home' },
-    { path: '/products/new', title: 'Add product' },
-    { path: '/products', title: 'Products' },
+    { path: '/products/new', title: 'FAQ' },
+    { path: '/products', title: 'Regulamin' },
     { path: '/contact', title: 'Contact' },
   ],
 }
