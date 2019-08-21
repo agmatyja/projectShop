@@ -10,12 +10,12 @@ const path = require('path');
 const app = express();
 
 // import routes
-const postRoutes = require('./routes/post.routes');
+const productRoutes = require('./routes/product.routes');
 app.use(cors());
 app.use(helmet());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-app.use('/api', postRoutes);
+app.use('/api', productRoutes);
 // app.use(sanitize);
 // Serve static files from the React app
 app.use(express.static(path.join(__dirname, '/../client/build')));

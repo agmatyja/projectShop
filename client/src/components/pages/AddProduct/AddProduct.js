@@ -1,5 +1,5 @@
 import React from 'react';
-import PostForm from '../../features/ProductForm/ProductFormContainer';
+import ProductForm from '../../features/ProductForm/ProductFormContainer';
 import 'medium-editor/dist/css/medium-editor.css';
 import 'medium-editor/dist/css/themes/default.css';
 

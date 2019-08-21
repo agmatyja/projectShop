@@ -21,7 +21,7 @@ ProductsList.propTypes = {
     PropTypes.shape({
       id: PropTypes.string.isRequired,
       title: PropTypes.string.isRequired,
-      price: PropTypes.Number.isRequired,
+      price: PropTypes.number.isRequired,
     })
   )
 };

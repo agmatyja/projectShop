@@ -2,9 +2,9 @@ import React from 'react';
 import { PropTypes } from 'prop-types';
 import Spinner from '../../common/Spinner/Spinner';
 import Alert from '../../common/Alert/Alert';
-import HtmlBox from '../../common/HtmlBox/HtmlBox';
+
 import PageTitle from '../../common/PageTitle/PageTitle';
-import { FacebookProvider, Comments, ShareButton } from 'react-facebook';
+//import { FacebookProvider, Comments, ShareButton } from 'react-facebook';
 import { withRouter } from 'react-router-dom';
 import {BASE_URL} from '../../../config';
 
@@ -23,7 +23,7 @@ class SinglePost extends React.Component {
 	      <article className="single-product">
 			<PageTitle>{product.title}</PageTitle>
 			
-			<HtmlBox>{product.content}</HtmlBox>
+		
 			
           </article>
 		);
@@ -31,8 +31,8 @@ class SinglePost extends React.Component {
         return <Spinner />;
     if (!request.pending && request.error !== null && request.error !== undefined)
         return <Alert variant="error">{request.error}</Alert>;
-    if (!request.pending && request.success && !post) 
-        return <Alert variant="info">No post</Alert>;
+    if (!request.pending && request.success && !product) 
+        return <Alert variant="info">No product</Alert>;
     return <Spinner />;
   }
 }

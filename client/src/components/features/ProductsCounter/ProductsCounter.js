@@ -4,7 +4,7 @@ import { PropTypes } from 'prop-types';
 class ProductsCounter extends React.Component {
 
   componentDidMount() {
-    const { loadroducts } = this.props;
+    const { loadProducts } = this.props;
     loadProducts();
   }
 

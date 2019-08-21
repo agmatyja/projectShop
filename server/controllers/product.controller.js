@@ -40,7 +40,7 @@ exports.addProduct = async function (req, res) {
     newProduct.id = uuid();
 
     productSaved = await newProduct.save();
-    res.status(200).json(postSaved);
+    res.status(200).json(productSaved);
 
   } catch(err) {
     res.status(500).json(err);

@@ -10,16 +10,17 @@ import Button from '../../common/Button/Button';
 import Alert from '../../common/Alert/Alert';
 import Spinner from '../../common/Spinner/Spinner';
 
-import './ProductForm.scss';
+//import './ProductForm.scss';
 
 class ProductForm extends React.Component {
 
   state = {
-    post: {
+    product: {
       title: '',
       author: '',
-      price: ,
-	  quantity:
+	  description: 'Lorem ipsum',
+      price: 0,
+	  quantity: 0
     }
   }
   
@@ -35,7 +36,7 @@ class ProductForm extends React.Component {
   
   addProduct = (e) => {
     const { addProduct } = this.props;
-    const { post } = this.state;
+    const { product } = this.state;
 
     e.preventDefault();
     addProduct(product);
@@ -98,4 +99,4 @@ ProductForm.propTypes = {
 };
 
 
-export default PostForm;
+export default ProductForm;

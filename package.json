@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm-run-all -p -l start:server",
+    "start": "npm-run-all -p -l start:server start:client",
     "start:server": "cd server && yarn start",
     "start:client": "cd client && yarn start",
     "install:server": "cd server && npm install",
@@ -19,7 +19,7 @@
     "helmet": "3.18.0",
     "heroku-cli": "^7.0.9",
     "mongo-sanitize": "^1.0.1",
-    "npm-run-all": "4.1.5",
+    "npm-run-all": "^4.1.5",
     "react-facebook": "8.0.4",
     "react-html-parser": "2.0.2",
     "react-medium-editor": "1.8.1",

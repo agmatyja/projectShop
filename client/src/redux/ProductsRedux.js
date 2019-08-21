@@ -32,7 +32,7 @@ export const startRequest = () => ({ type: START_REQUEST });
 export const endRequest = () => ({ type: END_REQUEST });
 export const errorRequest = error => ({ error, type: ERROR_REQUEST });
 export const resetRequest = () => ({ type: RESET_REQUEST });
-export const loadProducstsByPage = payload => ({ payload, type: LOAD_PRODUCTS_PAGE });
+export const loadProductsByPage = payload => ({ payload, type: LOAD_PRODUCTS_PAGE });
 
 /* INITIAL STATE */
 
@@ -160,7 +160,7 @@ export const loadProductsByPageRequest = (page, productsPerPage) => {
         presentPage: page,
       };
 
-      dispatch(loadPostsByPage(payload));
+      dispatch(loadProductsByPage(payload));
       dispatch(endRequest());
 
     } catch(e) {
