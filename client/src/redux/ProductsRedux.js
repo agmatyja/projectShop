@@ -39,10 +39,12 @@ export const loadProductsByPage = payload => ({ payload, type: LOAD_PRODUCTS_PAG
 const initialState = {
   data: [{
     id: 1,
-    name: 'Lorem Ipsum',
-    description: 'Lorem Ipsum',
-    price: 11,
-    in_stock: 4
+    extraInfo: '',
+    name: '',
+    image: '',
+    description: '',
+    price: 0,
+    inStock: 0
     /*...*/
   }],
   request: {
@@ -59,17 +61,17 @@ export default function reducer(statePart = initialState, action = {}) {
   switch (action.type) {
     case LOAD_PRODUCTS:
       return { ...statePart, data: action.payload };
-	case START_REQUEST:
+	  case START_REQUEST:
       return { ...statePart, request: { pending: true } };
     case END_REQUEST:
       return { ...statePart, request: { pending: false, success: true } };
-	case ERROR_REQUEST:
+	  case ERROR_REQUEST:
       return { ...statePart, request: { pending: false, error: action.error, success: false } };
-	case RESET_REQUEST:
+	  case RESET_REQUEST:
       return { ...statePart, request: { pending: false, error: null, success: null } };  
     case LOAD_PRODUCT:
-      return { ...statePart, singleProduct: action.payload };	  
-	case LOAD_PRODUCTS_PAGE:
+      return { ...statePart, product: action.payload };	  
+	  case LOAD_PRODUCTS_PAGE:
       return {
         ...statePart,
         productsPerPage: action.payload.productsPerPage,
@@ -113,12 +115,13 @@ export const loadProductRequest = (id) => {
       dispatch(endRequest());
 
     } catch(e) {
-	  if (e.response.status === 404) {
-		dispatch(loadProduct(null));  
+      console.log(e);
+  	  if (e.response.status === 404) {
+  		  dispatch(loadProduct(null));  
         dispatch(endRequest());
-	  } else {
-	    dispatch(errorRequest(e.message));
-	  }
+  	  } else {
+  	    dispatch(errorRequest(e.message));
+  	  }
     }
 
   };

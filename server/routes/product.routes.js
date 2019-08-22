@@ -9,9 +9,6 @@ router.route('/products').get(ProductController.getProducts);
 // get single product
 router.route('/products/:id').get(ProductController.getProduct);
 
-// add products
-router.route('/products').post(ProductController.addProduct);
-
 // get products by range
 router.route('/products/range/:startAt/:limit').get(ProductController.getProductsByRange);
 

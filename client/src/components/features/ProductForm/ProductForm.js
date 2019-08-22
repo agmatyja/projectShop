@@ -19,10 +19,10 @@ class ProductForm extends React.Component {
       extraInfo: '',
       title: '',
       author: '',
-      image: '',
+      image: null,
 	    description: 'Lorem ipsum',
       price: 0,
-	    in_stock: 0
+	    inStore: 0
     }
   }
   

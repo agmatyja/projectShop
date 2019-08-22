@@ -19,7 +19,7 @@ render() {
 
   return (
     <nav className="footer">
-      
+      <p>All rights reserved Agnieszka Matyja 2019</p>
       <MainMenu links={links} />
     </nav>
   );

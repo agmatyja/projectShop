@@ -23,10 +23,10 @@ ProductsList.propTypes = {
       extraInfo: PropTypes.string.isRequired,
       title: PropTypes.string.isRequired,
       author: PropTypes.string.isRequired,
-      image: PropTypes.string.isRequired,
+      image: PropTypes.string,
       description: PropTypes.string.isRequired,
       price: PropTypes.number.isRequired,
-      in_stock: PropTypes.number.isRequired,
+      inStore: PropTypes.number.isRequired,
     })
   )
 };

@@ -9,7 +9,7 @@ import Pagination from '../../common/Pagination/Pagination';
 class Products extends React.Component {
   loadProductsPage = (page) => {
     const { loadProductsByPage, productsPerPage } = this.props;
-    loadProductsByPage(page, productsPerPage || 10);
+    loadProductsByPage(page, productsPerPage || 6);
   }
   
   componentDidMount() {
@@ -46,10 +46,10 @@ Products.propTypes = {
       extraInfo: PropTypes.string.isRequired,
       title: PropTypes.string.isRequired,
 	    author: PropTypes.string.isRequired,
-      image: PropTypes.string.isRequired,
+      image: PropTypes.string,
       description: PropTypes.string.isRequired,
       price: PropTypes.number.isRequired,
-      in_stock: PropTypes.number.isRequired,
+      inStore: PropTypes.number.isRequired,
     })
   ),
   loadProductsByPage: PropTypes.func.isRequired,
