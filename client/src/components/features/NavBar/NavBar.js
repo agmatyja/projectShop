@@ -8,7 +8,7 @@ state = {
   links: [
     { path: '/', title: 'Home' },
     { path: '/products/b1', title: 'FAQ' },
-    { path: '/products', title: 'Regulamin' },
+    { path: '/products', title: 'Terms of Use' },
     { path: '/contact', title: 'Contact' },
   ],
 }

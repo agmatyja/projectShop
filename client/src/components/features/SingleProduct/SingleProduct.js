@@ -6,7 +6,6 @@ import Alert from '../../common/Alert/Alert';
 //import PageTitle from '../../common/PageTitle/PageTitle';
 //import { FacebookProvider, Comments, ShareButton } from 'react-facebook';
 import { withRouter } from 'react-router-dom';
-import {BASE_URL} from '../../../config';
 
 class SingleProduct extends React.Component {
 
