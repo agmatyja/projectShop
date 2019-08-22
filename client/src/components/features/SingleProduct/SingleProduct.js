@@ -3,8 +3,6 @@ import { PropTypes } from 'prop-types';
 import Spinner from '../../common/Spinner/Spinner';
 import Alert from '../../common/Alert/Alert';
 
-//import PageTitle from '../../common/PageTitle/PageTitle';
-//import { FacebookProvider, Comments, ShareButton } from 'react-facebook';
 import { withRouter } from 'react-router-dom';
 
 class SingleProduct extends React.Component {
@@ -52,5 +50,4 @@ SingleProduct.propTypes = {
   id: PropTypes.string
 };
 
-//export default SingleProduct;
 export default withRouter(props => <SingleProduct {...props}/>);
