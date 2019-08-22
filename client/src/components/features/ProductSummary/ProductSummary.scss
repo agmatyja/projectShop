@@ -1,6 +1,6 @@
 @import '../../../styles/settings.scss';
 
-.post-summary {
+.product-summary {
     border-bottom: 1px solid $color-textfield-border;
     padding: $base-size;
     margin-bottom: $base-size;
@@ -9,7 +9,7 @@
     cursor: pointer;
 }
 
-.post-summary:hover {
+.product-summary:hover {
     margin-left: -$base-size*2;
     margin-top: -$base-size / 5;
     border-radius: $radius;

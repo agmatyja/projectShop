@@ -13,6 +13,7 @@ class SingleProduct extends React.Component {
   componentDidMount() {
     const { loadProduct } = this.props;
     loadProduct(this.props.id);
+    console.log(this.props);
   }
 
   render() {

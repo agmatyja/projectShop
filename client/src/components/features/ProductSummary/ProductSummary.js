@@ -1,6 +1,6 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
-//import './ProductSummary.scss';
+import './ProductSummary.scss';
 
 import Button from '../../common/Button/Button';
 import SmallTitle from '../../common/SmallTitle/SmallTitle';
@@ -12,6 +12,7 @@ const ProductSummary = ({ id, title, author, description }) => (
   </article>
 );
 /*
+
   <a href={"/products/" + id}>
     <Button variant="primary">Add to cart</Button>
   </a>

@@ -3,7 +3,7 @@ import { getProduct, getRequest, loadProductRequest } from '../../../redux/Produ
 import SingleProduct from './SingleProduct';
 
 const mapStateToProps = state => ({
-  post: getProduct(state),
+  product: getProduct(state),
   request: getRequest(state),
 })
 
