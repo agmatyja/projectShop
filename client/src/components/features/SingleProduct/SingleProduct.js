@@ -22,6 +22,7 @@ class SingleProduct extends React.Component {
   	      <article className="single-product">
             <h2>{product.title}</h2>
             <b>{product.author}</b><br/>
+            <img src={`data:image/jpeg;base64,${product.image}`} />
             {product.description}
           </article>
     		);
