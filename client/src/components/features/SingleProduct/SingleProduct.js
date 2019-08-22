@@ -13,7 +13,6 @@ class SingleProduct extends React.Component {
   componentDidMount() {
     const { loadProduct } = this.props;
     loadProduct(this.props.id);
-    console.log(this.props);
   }
 
   render() {
@@ -21,9 +20,12 @@ class SingleProduct extends React.Component {
 	 
     if (!request.pending && request.success && product) 
         return (
-	      <article className="single-product">
-        </article>
-		);
+  	      <article className="single-product">
+            <h2>{product.title}</h2>
+            <b>{product.author}</b><br/>
+            {product.description}
+          </article>
+    		);
     if (request.pending || request.success === null)
         return <Spinner />;
     if (!request.pending && request.error !== null && request.error !== undefined)

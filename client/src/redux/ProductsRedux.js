@@ -6,7 +6,7 @@ import { API_URL } from '../config';
 export const getProducts = ({ products }) => products.data;
 export const getProductsCount = ({ products }) => products.amount;
 export const getRequest = ({ products }) => products.request;
-export const getProduct = ({ products }) => products.singleProduct;
+export const getProduct = ({ products }) => products.product;
 export const getPages = ({ products }) => Math.ceil(products.amount / products.productsPerPage);
 export const getPresentPage = ({ products }) => products.presentPage;
 
@@ -38,13 +38,14 @@ export const loadProductsByPage = payload => ({ payload, type: LOAD_PRODUCTS_PAG
 
 const initialState = {
   data: [{
-    id: 1,
+    id: '1',
+    title: '',
+    author: '',
     extraInfo: '',
-    name: '',
-    image: '',
+    image: null,
     description: '',
     price: 0,
-    inStock: 0
+    inStore: 0
     /*...*/
   }],
   request: {
@@ -52,7 +53,7 @@ const initialState = {
     error: null,
     pending: false
   },
-  cart: [{ productId: 1, quantity: 3}, { productId: 2, quantity: 2}]
+  cart: [{ productId: '1', quantity: 3}, { productId: '2', quantity: 2}]
 }
 
 /* REDUCER */
@@ -93,12 +94,12 @@ export const loadProductsRequest = () => {
     try {
 
       let res = await axios.get(`${API_URL}/products`);
-      //await new Promise((resolve, reject) => setTimeout(resolve, 2000));
       dispatch(loadProducts(res.data));
       dispatch(endRequest());
 
     } catch(e) {	
-	  dispatch(errorRequest(e.message));
+      console.log(e)
+	    dispatch(errorRequest(e.message));
     }
 
   };
@@ -110,7 +111,6 @@ export const loadProductRequest = (id) => {
     dispatch(startRequest());
     try {
       let res = await axios.get(`${API_URL}/products/` + id);
-      //await new Promise((resolve, reject) => setTimeout(resolve, 2000));
       dispatch(loadProduct(res.data));
       dispatch(endRequest());
 
@@ -134,10 +134,10 @@ export const addProductRequest = (product) => {
     try {
 
       await axios.post(`${API_URL}/products`, product);
-      //await new Promise((resolve, reject) => setTimeout(resolve, 2000));
       dispatch(endRequest());
 
     } catch(e) {
+      console.log(e)
       dispatch(errorRequest(e.message));
     }
 
@@ -154,7 +154,6 @@ export const loadProductsByPageRequest = (page, productsPerPage) => {
       const limit = productsPerPage;
 
       let res = await axios.get(`${API_URL}/products/range/${startAt}/${limit}`);
-      //await new Promise((resolve, reject) => setTimeout(resolve, 2000));
 
       const payload = {
         products: res.data.products,
@@ -167,6 +166,7 @@ export const loadProductsByPageRequest = (page, productsPerPage) => {
       dispatch(endRequest());
 
     } catch(e) {
+      console.log(e)
       dispatch(errorRequest(e.message));
     }
 
