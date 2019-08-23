@@ -9,12 +9,12 @@ class Widget extends React.Component {
     return (
       <nav className="widget">
         <p>Sort by:</p>
-        <p className={"sort " + (sort === "Title A-Z" ? "active" : "")} onClick={() => { sortProducts("Title A-Z")}} ><a>Title A-Z</a></p>
-        <p className={"sort " + (sort === "Title Z-A" ? "active" : "")} onClick={() => { sortProducts("Title Z-A")}} ><a>Title Z-A</a></p>
-        <p className={"sort " + (sort === "Author A-Z" ? "active" : "")} onClick={() => { sortProducts("Author A-Z")}} ><a>Author A-Z</a></p>
-        <p className={"sort " + (sort === "Author Z-A" ? "active" : "")} onClick={() => { sortProducts("Author Z-A")}} ><a>Author Z-A</a></p>
-        <p className={"sort " + (sort === "Price increasing" ? "active" : "")} onClick={() => { sortProducts("Price increasing")}} ><a>Price increasing</a></p>
-        <p className={"sort " + (sort === "Price decreasing" ? "active" : "")} onClick={() => { sortProducts("Price decreasing")}} ><a>Price decreasing</a></p>
+        <p className={"sort " + (sort === "TITLE_ASC" ? "active" : "")} onClick={() => { sortProducts("TITLE_ASC")}} ><a>Title A-Z</a></p>
+        <p className={"sort " + (sort === "TITLE_DESC" ? "active" : "")} onClick={() => { sortProducts("TITLE_DESC")}} ><a>Title Z-A</a></p>
+        <p className={"sort " + (sort === "AUTHOR_ASC" ? "active" : "")} onClick={() => { sortProducts("AUTHOR_ASC")}} ><a>Author A-Z</a></p>
+        <p className={"sort " + (sort === "AUTHOR_DESC Z-A" ? "active" : "")} onClick={() => { sortProducts("AUTHOR_DESC")}} ><a>Author Z-A</a></p>
+        <p className={"sort " + (sort === "PRICE_ASC" ? "active" : "")} onClick={() => { sortProducts("PRICE_ASC")}} ><a>Price ascending</a></p>
+        <p className={"sort " + (sort === "PRICE_DESC" ? "active" : "")} onClick={() => { sortProducts("PRICE_DESC")}} ><a>Price descending</a></p>
       </nav>
     );
   };

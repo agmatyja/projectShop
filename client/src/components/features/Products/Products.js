@@ -23,11 +23,11 @@ class Products extends React.Component {
 
 	  if (!request.pending && request.success && products !== null && products.length > 0 && pagination === false) 
         return <ProductsList products={products} />;
-    if (products === null && !request.pending && request.error === null) {
+    if (products === null && !request.pending && !request.error) {
         this.loadProductsPage(initialPage);
         return <Spinner />;
     }
-    if (!request.pending && request.success && products.length > 0) 
+    if (!request.pending && request.success && products !== null && products.length > 0) 
         return <div>
           <ProductsList products={products} />
           <Pagination pages={pages} onPageChange={this.loadProductsPage} initialPage={initialPage || 1}/>
@@ -36,7 +36,7 @@ class Products extends React.Component {
         return <Spinner />;
     if (!request.pending && request.error !== null && request.error !== undefined)
         return <Alert variant="error">{request.error}</Alert>;
-    if (!request.pending && request.success && products.length === 0) 
+    if (!request.pending && request.success && (products === null || products.length === 0)) 
         return <Alert variant="info">No products</Alert>;
 	
     return <Spinner />;

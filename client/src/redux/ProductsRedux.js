@@ -55,7 +55,7 @@ const initialState = {
     pending: false
   },
   cart: [{ productId: '1', quantity: 3}, { productId: '2', quantity: 2}],
-  sort: 'Title A-Z'
+  sort: 'TITLE_ASC'
 }
 
 /* REDUCER */

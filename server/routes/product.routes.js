@@ -10,6 +10,6 @@ router.route('/products').get(ProductController.getProducts);
 router.route('/products/:id').get(ProductController.getProduct);
 
 // get products by range
-router.route('/products/range/:startAt/:limit').get(ProductController.getProductsByRange);
+router.route('/products/range/:startAt/:limit/:sort').get(ProductController.getProductsByRange);
 
 module.exports = router;
