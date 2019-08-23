@@ -10,6 +10,8 @@ state = {
     { path: '/products/b1', title: 'FAQ' },
     { path: '/products', title: 'Terms of Use' },
     { path: '/contact', title: 'Contact' },
+    <i class="fas fa-shopping-bag"></i>
+//Download SVGPerfect for when you want to use just one icon as a vector on the desktop or in your own icon workflow.
   ],
 }
 

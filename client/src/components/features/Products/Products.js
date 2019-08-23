@@ -8,21 +8,25 @@ import Pagination from '../../common/Pagination/Pagination';
 
 class Products extends React.Component {
   loadProductsPage = (page) => {
-    const { loadProductsByPage, productsPerPage } = this.props;
-    loadProductsByPage(page, productsPerPage || 6);
+    const { loadProductsByPage, productsPerPage, sort } = this.props;
+    loadProductsByPage(page, productsPerPage || 6, sort);
   }
   
   componentDidMount() {
-	this.loadProductsPage(1);
+    this.loadProductsPage(1);
   }
 
   render() {
     const { products, request } = this.props;
-	const { initialPage, pages} = this.props;
+	  const { initialPage, pages} = this.props;
     const { pagination } = this.props;
-	
-	if (!request.pending && request.success && products.length > 0 && pagination === false) 
+
+	  if (!request.pending && request.success && products !== null && products.length > 0 && pagination === false) 
         return <ProductsList products={products} />;
+    if (products === null && !request.pending && request.error === null) {
+        this.loadProductsPage(initialPage);
+        return <Spinner />;
+    }
     if (!request.pending && request.success && products.length > 0) 
         return <div>
           <ProductsList products={products} />
@@ -56,6 +60,7 @@ Products.propTypes = {
   initialPage: PropTypes.number,
   pages: PropTypes.number.isRequired,
   productsPerPage: PropTypes.number,
+  sort: PropTypes.string,
   pagination: PropTypes.bool
 };
 

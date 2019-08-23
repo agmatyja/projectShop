@@ -1,0 +1,17 @@
+.widget {
+	p.sort {
+		a:hover {
+		  color: hotpink;
+		}
+
+		a:active {
+		  color: hotpink;
+		}
+
+		&.active {
+		  a {
+		    color: blue;
+		  }  
+		}
+	}
+}

@@ -9,6 +9,7 @@ export const getRequest = ({ products }) => products.request;
 export const getProduct = ({ products }) => products.product;
 export const getPages = ({ products }) => Math.ceil(products.amount / products.productsPerPage);
 export const getPresentPage = ({ products }) => products.presentPage;
+export const getSort = ({ products }) => products.sort;
 
 
 /* ACTIONS */
@@ -18,21 +19,22 @@ const reducerName = 'products';
 const createActionName = name => `app/${reducerName}/${name}`;
 
 export const LOAD_PRODUCTS = createActionName('LOAD_PRODUCTS');
-export const loadProducts = payload => ({ payload, type: LOAD_PRODUCTS });
 export const LOAD_PRODUCT = createActionName('LOAD_PRODUCT');
-export const loadProduct = payload => ({ payload, type: LOAD_PRODUCT });
-
 export const START_REQUEST = createActionName('START_REQUEST');
 export const END_REQUEST = createActionName('END_REQUEST');
 export const ERROR_REQUEST = createActionName('ERROR_REQUEST');
 export const RESET_REQUEST = createActionName('RESET_REQUEST');
-export const LOAD_PRODUCTS_PAGE = createActionName('LOAD_PRODUCTS_PAGE');
+export const LOAD_PRODUCTS_BY_PAGE = createActionName('LOAD_PRODUCTS_PAGE');
+export const SORT_PRODUCTS = createActionName('SORT_PRODUCTS');
 
+export const loadProducts = payload => ({ payload, type: LOAD_PRODUCTS });
+export const loadProduct = payload => ({ payload, type: LOAD_PRODUCT });
 export const startRequest = () => ({ type: START_REQUEST });
 export const endRequest = () => ({ type: END_REQUEST });
 export const errorRequest = error => ({ error, type: ERROR_REQUEST });
 export const resetRequest = () => ({ type: RESET_REQUEST });
-export const loadProductsByPage = payload => ({ payload, type: LOAD_PRODUCTS_PAGE });
+export const loadProductsByPage = payload => ({ payload, type: LOAD_PRODUCTS_BY_PAGE });
+export const sortProducts = payload => ({ payload, type: SORT_PRODUCTS });
 
 /* INITIAL STATE */
 
@@ -46,14 +48,14 @@ const initialState = {
     description: '',
     price: 0,
     inStore: 0
-    /*...*/
   }],
   request: {
     success: false,
     error: null,
     pending: false
   },
-  cart: [{ productId: '1', quantity: 3}, { productId: '2', quantity: 2}]
+  cart: [{ productId: '1', quantity: 3}, { productId: '2', quantity: 2}],
+  sort: 'Title A-Z'
 }
 
 /* REDUCER */
@@ -71,8 +73,10 @@ export default function reducer(statePart = initialState, action = {}) {
 	  case RESET_REQUEST:
       return { ...statePart, request: { pending: false, error: null, success: null } };  
     case LOAD_PRODUCT:
-      return { ...statePart, product: action.payload };	  
-	  case LOAD_PRODUCTS_PAGE:
+      return { ...statePart, product: action.payload };
+    case SORT_PRODUCTS:
+      return { ...statePart, data: null, sort: action.payload };	  
+	  case LOAD_PRODUCTS_BY_PAGE:
       return {
         ...statePart,
         productsPerPage: action.payload.productsPerPage,
@@ -81,7 +85,7 @@ export default function reducer(statePart = initialState, action = {}) {
         data: [...action.payload.products],
     };
     default: 
-	  return statePart;
+	    return statePart;
   }
 };
 
@@ -144,8 +148,7 @@ export const addProductRequest = (product) => {
   };
 };
 
-export const loadProductsByPageRequest = (page, productsPerPage) => {
-
+export const loadProductsByPageRequest = (page, productsPerPage, sort) => {
   return async dispatch => {
     dispatch(startRequest());
     try {
@@ -153,7 +156,7 @@ export const loadProductsByPageRequest = (page, productsPerPage) => {
       const startAt = (page - 1) * productsPerPage;
       const limit = productsPerPage;
 
-      let res = await axios.get(`${API_URL}/products/range/${startAt}/${limit}`);
+      let res = await axios.get(`${API_URL}/products/range/${startAt}/${limit}/${sort}`);
 
       const payload = {
         products: res.data.products,
