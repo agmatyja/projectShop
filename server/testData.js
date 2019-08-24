@@ -9,6 +9,7 @@ const loadTestData = async () => {
       extraInfo: '',
       title: 'An evil mind',
 	    author: "Chris Carter",
+      lastName: "Carter",
       imageFile: 'book1.jpg',
       description: 'FROM THE AUTHOR OF THE SUNDAY TIMES NUMBER ONE BESTSELLER THE CALLER.\n' +
         'A freak accident in rural Wyoming leads the Sheriff’s Department to arrest a man for a possible double homicide, but further investigations suggest a much more horrifying discovery – a serial killer who has been kidnapping, torturing and mutilating victims all over the United States for at least twenty-five years.\n'+
@@ -24,6 +25,7 @@ const loadTestData = async () => {
       extraInfo: '',
       title: '17th suspect',
 	    author: "James Patterson & Maxine Paetro",
+      lastName: "Patterson",
       imageFile: 'book2.jpg',
       description: 'The bestselling 17th novel in the Women’s Murder Club series\n' +
         'A KILLER WITH A PLAN\n' +
@@ -40,6 +42,7 @@ const loadTestData = async () => {
       extraInfo: '',
       title: 'The hitchhikers guide to the galaxy',
       author: "Douglas Adams",
+      lastName: "Adams",
       imageFile: 'book3.jpg',
       description: 'A phenomenon across all formats, Douglas Adams’ The Hitchhiker’s Guide to the Galaxy has been a radio show, a television show, a move and a series of bestselling novels. The Hitchhiker’s Guide to the Galaxy: The Trilogy of Four contains the first four parts of the cult classic ‚trilogy’: The Hitchhiker’s Guide to the Galaxy, The Restaurant at the End of the Universe, Life, the Universe and Everything, and So Long, and Thanks for All the Fish.\n' +
         'The Hitchhiker’s Guide to the Galaxy: One Thursday lunchtime the Earth gets demolished to make way for a hyperspace bypass. For Arthur, who has just had his house demolished, this is too much. Sadly, the weekend’s just begun.\n'+
@@ -53,6 +56,7 @@ const loadTestData = async () => {
       extraInfo: '',
       title: 'The adventure of the Christmas pudding',
       author: "Agatha Christie",
+      lastName: "Christie",
       imageFile: 'book4.jpg',
       description: 'In this delightful tale, an Eastern Prince arrives in England with some family jewels which he’s having reset as a gift for his fianceé. However, the Prince also has a mistress. She asks to wear one particularly enchanting piece that features a huge ruby, and then promptly disappears with it. Poirot discovers a connection with a house party at the home of Colonel and Mrs Lacey and, in order to pursue his investigation, an invitation is procured for him to the Laceys’, ostensibly to enjoy an old-fashioned Christmas. With deft skill and the workings of his little grey cells, Poirot brings this case to a satisfying and festive conclusion. Starring John Moffat as Hercule Poirot, with Donald Sinden and Siân Phillips as Colonel and Mrs Lacey.',
       price: 20,
@@ -63,6 +67,7 @@ const loadTestData = async () => {
       extraInfo: '',
       title: 'The affair',
       author: "Amanda Brooke",
+      lastName: "Brooke",
       imageFile: 'book5.jpg',
       description: 'A shocking story about a fifteen-year-old girl and the man who took advantage of her\n'+
         '“You might as well know from the start, I’m not going to tell on him and I don’t care how much trouble I get in. It’s not like it could get any worse than it already is.\n'+
@@ -77,6 +82,7 @@ const loadTestData = async () => {
       extraInfo: '',
       title: 'The lost plays',
       author: "Agatha Christie",
+      lastName: "Christie",
       imageFile: 'book6.jpg',
       description: 'A triple bill of archive BBC radio dramas, believed lost for over half a century and only recently rediscovered. Butter in a Lordly Dish, written specially for radio in 1948, features Richard Williams as Sir Luke Enderby KC, whose infidelities lead him into trouble when he goes to meet his latest flame. Williams also stars as Hercule Poirot in Murder in the Mews, a 1955 adaptation of a short story. A young woman is found dead in her flat, the day after Guy Fawkes night. Did she die by her own hand, or someone else’s? In Personal Call, also written specially for radio by Agatha Christie, a disturbing telephone call from a woman named Fay has consequences for both Richard Brent and his wife Pam. This 1960 production stars Ivan Brandt and Barbara Lott.',
       price: 20,
@@ -86,6 +92,7 @@ const loadTestData = async () => {
       extraInfo: '',
       title: 'Agent in place',
       author: "Mark Greaney",
+      lastName: "Greaney",
       imageFile: 'book7.jpg',
       description: 'The Gray Man is back in another nonstop international thriller from the #1 New York Times bestselling coauthor of Tom Clancy’s Jack Ryan novels.' +
         'Fresh off his first mission back with the CIA, Court Gentry secures what seems like a cut-and-dried contract job: A group of expats in Paris hires him to kidnap the mistress of Syrian dictator Ahmed Azzam to get intel that could destabilize Azzam’s regime.' +
@@ -98,6 +105,7 @@ const loadTestData = async () => {
       extraInfo: '',
       title: 'All by myself, alone',
       author: "Mary Higgins Clark",
+      lastName: "Higgins Clark",
       imageFile: 'book8.jpg',
       description: 'The thrilling new novel from the multi-million copy global bestselling author, ‚Queen of Suspense’ Mary Higgins Clark.' +
         'A glamorous cruise on a luxurious ocean liner turns deadly…' +
@@ -112,6 +120,7 @@ const loadTestData = async () => {
       extraInfo: '',
       title: 'Angels and demons',
       author: "Dan Brown",
+      lastName: "Brown",
       imageFile: 'book9.jpg',
       description: 'CERN Institute, Switzerland: a world-renowned scientist is found brutally murdered with a mysterious symbol seared onto his chest.' +
         'The Vatican, Rome: the College of Cardinals assembles to elect a new pope. Somewhere beneath them, an unstoppable bomb of terrifying power relentlessly counts down to oblivion.' +
@@ -123,6 +132,7 @@ const loadTestData = async () => {
       extraInfo: '',
       title: 'The appeal',
       author: "John Grisham",
+      lastName: "Grisham",
       imageFile: 'book10.jpg',
       description: 'In a crowded courtroom in Mississippi, a jury returns a shocking verdict against a chemical company accused of dumping toxic waste into a small town’s water supply, causing the worst “cancer cluster” in history. The company appeals to the Mississippi Supreme Court, whose nine justices will one day either approve the verdict—or reverse it.' +
         'The chemical company is owned by a Wall Street predator named Carl Trudeau, and Mr. Trudeau is convinced the Court is not friendly enough to his interests. With judicial elections looming, he decides to try to purchase himself a seat on the Court. The cost is a few million dollars, a drop in the bucket for a billionaire like Mr. Trudeau. Through an intricate web of conspiracy and deceit, his political operatives recruit a young, unsuspecting candidate. They finance him, manipulate him, market him, and mold him into a potential Supreme Court justice. Their Supreme Court justice.',
@@ -133,6 +143,7 @@ const loadTestData = async () => {
       extraInfo: '',
       title: 'Appointment with death',
       author: "Agatha Christie",
+      lastName: "Christie",
       imageFile: 'book11.jpg',
       description: '‚You do see, don’t you, that she’s got to be killed? It’s the only solution.’ Even when on holiday in Jerusalem – the so-called City of Peace – Hercule Poirot can’t seem to escape the strains of death and murder. His first evening at the King Solomon Hotel finds the above phrase floating into his room from outside. What does it mean? Who is the speaker, and just how seriously should it be considered? Whilst Poirot struggles to resist the lure of a fresh mystery, he cannot suppress the foreboding in his heart. Also in residence at the hotel are the Boyntons, a nervous American family held tightly in the grip of their matriarch. Then there is the young medic Sarah King, plus Dr Theodore Gerard, an expert in the subject of schizophrenia. These and other guests are thrown together on an organised trip to the ancient city of Petra. Whilst love apparently blossoms for Miss King, death visits another member of the party. It is clearly murder, and there are a number of likely suspects. Only one man has the skill to distinguish between them: Hercule Poirot.',
       price: 20, 
@@ -142,6 +153,7 @@ const loadTestData = async () => {
       extraInfo: '',
       title: 'The beautiful dead',
       author: "Belinda Bauer",
+      lastName: "Bauer",
       imageFile: 'book12.jpg',
       description: 'They wanted the same things. Death – and an audience.' +
         'Eve Singer makes her living from death. As a TV crime reporter, she’ll go to any length to get the latest scoop.' +
@@ -153,6 +165,7 @@ const loadTestData = async () => {
       extraInfo: '',
       title: 'Black coffee',
       author: "Agatha Christie",
+      lastName: "Christie",
       imageFile: 'book13.jpg',
       description: 'Sir Claud Amory’s revolutionary new formula for a powerful explosive is stolen. Locking his house-guests in the library, Sir Claud switches off the lights to allow the thief to replace the formula, no questions asked. When the lights come on, he is dead, and Hercule Poirot and Captain Hastings have to unravel a tangle of family feuds, old flames and suspicious foreigners to find the killer and prevent a global catastrophe.',
       price: 20,  
@@ -162,6 +175,7 @@ const loadTestData = async () => {
       extraInfo: '',
       title: 'The beach',
       author: "Alex Garland",
+      lastName: "Garland",
       imageFile: 'book14.jpg',
       description: 'A 20th anniversary edition of this million copy bestseller, with a new introduction by John Niven: a classic story of paradise found – and lost.' +
         'Richard lands in East Asia in search of an earthly utopia. In Thailand, he is given a map promising an unknown island, a secluded beach – and a new way of life. What Richard finds when he gets there is breathtaking: more extraordinary, more frightening than his wildest dreams.' +
@@ -173,6 +187,7 @@ const loadTestData = async () => {
       extraInfo: '',
       title: 'Bad blood',
       author: "E.O. Chirovici",
+      lastName: "Chirovici",
       imageFile: 'book15.jpg',
       description: 'You can’t trust your own memories.' +
         'You can’t trust other people’s.' +
@@ -186,6 +201,7 @@ const loadTestData = async () => {
       extraInfo: '',
       title: 'The bad mother',
       author: "Amanda Brooke",
+      lastName: "Brooke",
       imageFile: 'book16.jpg',
       description: 'That’s what he wants you to think…\n' +
         'A good mother doesn’t forget things.\n' +

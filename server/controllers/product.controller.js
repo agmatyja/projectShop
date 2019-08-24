@@ -52,12 +52,12 @@ exports.addProduct = async function (req, res) {
 }
 
 const sortParam = {
-  'TITLE_ASC' : {'title': 1},
-  'TITLE_DESC' : {'title': -1},
-  'AUTHOR_ASC' : {'author': 1},
-  'AUTHOR_DESC' : {'author': -1},
-  'PRICE_ASC' : {'price': 1},
-  'PRICE_DESC' : {'price': -1},
+  'TITLE_ASC' : {'title': 1, 'lastName': 1, 'author': 1},
+  'TITLE_DESC' : {'title': -1, 'lastName': -1, 'author': -1},
+  'AUTHOR_ASC' : {'lastName': 1, 'author': 1, 'title': 1},
+  'AUTHOR_DESC' : {'lastName': -1, 'author': -1, 'title': -1},
+  'PRICE_ASC' : {'price': 1, 'lastName': 1, 'author': 1, 'title': 1},
+  'PRICE_DESC' : {'price': -1, 'lastName': -1, 'author': -1, 'title': -1},
 }
 
 // get products by range
