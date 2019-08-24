@@ -18,7 +18,6 @@ const loadTestData = async () => {
         '‚Gripping . . . not for the squeamish’ Heat\n'+
         '‚A page-turner’ Express',
       price: 10,
-      inStore: 20
     },
     {
       id: 'b2',
@@ -35,7 +34,6 @@ const loadTestData = async () => {
         'But with lives on the line, Lindsay can’t stop herself from following the case into ever more terrifying terrain – even though the killer could cost her everything…\n' +
         'HOW FAR IS TOO FAR?',
       price: 20,
-      inStore: 30
     },
     {
       id: 'b3',
@@ -49,7 +47,6 @@ const loadTestData = async () => {
         'Life, the Universe and Everything: In consequence of a number of stunning catastrophes, Arthur Dent is surprised to find himself living in a hideously miserable cave on prehistoric Earth. And then, just as he thinks that things cannot possibly get any worse, they suddenly do.\n'+
         'So Long, and Thanks For All the Fish: Arthur Dent’s sense of reality is in its dickiest state when he suddenly finds the girl of his dreams. They go in search of God’s Final Message and, in a dramatic break with tradition, actually find it.lp you on the road.\n',
       price: 20,
-      inStore: 30
     },
     {
       id: 'b4',
@@ -59,7 +56,6 @@ const loadTestData = async () => {
       imageFile: 'book4.jpg',
       description: 'In this delightful tale, an Eastern Prince arrives in England with some family jewels which he’s having reset as a gift for his fianceé. However, the Prince also has a mistress. She asks to wear one particularly enchanting piece that features a huge ruby, and then promptly disappears with it. Poirot discovers a connection with a house party at the home of Colonel and Mrs Lacey and, in order to pursue his investigation, an invitation is procured for him to the Laceys’, ostensibly to enjoy an old-fashioned Christmas. With deft skill and the workings of his little grey cells, Poirot brings this case to a satisfying and festive conclusion. Starring John Moffat as Hercule Poirot, with Donald Sinden and Siân Phillips as Colonel and Mrs Lacey.',
       price: 20,
-      inStore: 30
     },
     {
       
@@ -75,7 +71,6 @@ const loadTestData = async () => {
         'Because Scarlet won’t tell anyone who the father is. And Nina is scared that the answer will destroy everything.\n'+
         'As the suspects mount – from Scarlett’s teacher to Nina’s new husband of less than a year – Nina searches for the truth: no matter what the cost.\n',
       price: 20,
-      inStore: 30
     },
     {
       id: 'b6',
@@ -85,7 +80,6 @@ const loadTestData = async () => {
       imageFile: 'book6.jpg',
       description: 'A triple bill of archive BBC radio dramas, believed lost for over half a century and only recently rediscovered. Butter in a Lordly Dish, written specially for radio in 1948, features Richard Williams as Sir Luke Enderby KC, whose infidelities lead him into trouble when he goes to meet his latest flame. Williams also stars as Hercule Poirot in Murder in the Mews, a 1955 adaptation of a short story. A young woman is found dead in her flat, the day after Guy Fawkes night. Did she die by her own hand, or someone else’s? In Personal Call, also written specially for radio by Agatha Christie, a disturbing telephone call from a woman named Fay has consequences for both Richard Brent and his wife Pam. This 1960 production stars Ivan Brandt and Barbara Lott.',
       price: 20,
-      inStore: 30
     },
     {
       id: 'b7',
@@ -98,7 +92,6 @@ const loadTestData = async () => {
         'Court delivers Bianca Medina to the rebels, but his job doesn’t end there. She soon reveals that she has given birth to a son, the only heir to Azzam’s rule–and a potent threat to the Syrian president’s powerful wife.' +
         'Now, to get Bianca’s cooperation, Court must bring her son out of Syria alive. With the clock ticking on Bianca’s life, he goes off the grid in a free-fire zone in the Middle East–and winds up in the right place at the right time to take a shot at bringing one of the most brutal dictatorships on earth to a close…',
       price: 20,
-      inStore: 30
     },
     {
       id: 'b8',
@@ -113,7 +106,6 @@ const loadTestData = async () => {
         'But three days out to sea Lady Emily is found dead – with the necklace missing. And the list of suspects is large and growing.' +
         'Celia sets out to find the killer, not realizing that she has put herself in mortal danger before the ship reaches its final destination…',
       price: 20,
-      inStore: 30
     },
     {
       id: 'b9',
@@ -125,7 +117,6 @@ const loadTestData = async () => {
         'The Vatican, Rome: the College of Cardinals assembles to elect a new pope. Somewhere beneath them, an unstoppable bomb of terrifying power relentlessly counts down to oblivion.' +
         'In a breathtaking race against time, Harvard professor Robert Langdon must decipher a labyrinthine trail of ancient symbols if he is to defeat those responsible – the Illuminati, a secret brotherhood presumed extinct for nearly four hundred years, reborn to continue their deadly vendetta against their most hated enemy, the Catholic Church.',
       price: 20,
-      inStore: 30
     },
     {
       id: 'b10',
@@ -136,7 +127,6 @@ const loadTestData = async () => {
       description: 'In a crowded courtroom in Mississippi, a jury returns a shocking verdict against a chemical company accused of dumping toxic waste into a small town’s water supply, causing the worst “cancer cluster” in history. The company appeals to the Mississippi Supreme Court, whose nine justices will one day either approve the verdict—or reverse it.' +
         'The chemical company is owned by a Wall Street predator named Carl Trudeau, and Mr. Trudeau is convinced the Court is not friendly enough to his interests. With judicial elections looming, he decides to try to purchase himself a seat on the Court. The cost is a few million dollars, a drop in the bucket for a billionaire like Mr. Trudeau. Through an intricate web of conspiracy and deceit, his political operatives recruit a young, unsuspecting candidate. They finance him, manipulate him, market him, and mold him into a potential Supreme Court justice. Their Supreme Court justice.',
       price: 20,
-      inStore: 30
     },
     {
       id: 'b11',
@@ -145,8 +135,7 @@ const loadTestData = async () => {
       author: "Agatha Christie",
       imageFile: 'book11.jpg',
       description: '‚You do see, don’t you, that she’s got to be killed? It’s the only solution.’ Even when on holiday in Jerusalem – the so-called City of Peace – Hercule Poirot can’t seem to escape the strains of death and murder. His first evening at the King Solomon Hotel finds the above phrase floating into his room from outside. What does it mean? Who is the speaker, and just how seriously should it be considered? Whilst Poirot struggles to resist the lure of a fresh mystery, he cannot suppress the foreboding in his heart. Also in residence at the hotel are the Boyntons, a nervous American family held tightly in the grip of their matriarch. Then there is the young medic Sarah King, plus Dr Theodore Gerard, an expert in the subject of schizophrenia. These and other guests are thrown together on an organised trip to the ancient city of Petra. Whilst love apparently blossoms for Miss King, death visits another member of the party. It is clearly murder, and there are a number of likely suspects. Only one man has the skill to distinguish between them: Hercule Poirot.',
-      price: 20,
-      inStore: 30
+      price: 20, 
     },
     {
       id: 'b12',
@@ -157,8 +146,7 @@ const loadTestData = async () => {
       description: 'They wanted the same things. Death – and an audience.' +
         'Eve Singer makes her living from death. As a TV crime reporter, she’ll go to any length to get the latest scoop.' +
         'But when a twisted serial killer starts using her to gain the publicity he craves, Eve must decide how far she’s willing to go – and how close she’ll let him get . . .',
-      price: 20,
-      inStore: 30
+      price: 20, 
     },
     {
       id: 'b13',
@@ -167,8 +155,7 @@ const loadTestData = async () => {
       author: "Agatha Christie",
       imageFile: 'book13.jpg',
       description: 'Sir Claud Amory’s revolutionary new formula for a powerful explosive is stolen. Locking his house-guests in the library, Sir Claud switches off the lights to allow the thief to replace the formula, no questions asked. When the lights come on, he is dead, and Hercule Poirot and Captain Hastings have to unravel a tangle of family feuds, old flames and suspicious foreigners to find the killer and prevent a global catastrophe.',
-      price: 20,
-      inStore: 30
+      price: 20,  
     },
     {
       id: 'b14',
@@ -179,8 +166,7 @@ const loadTestData = async () => {
       description: 'A 20th anniversary edition of this million copy bestseller, with a new introduction by John Niven: a classic story of paradise found – and lost.' +
         'Richard lands in East Asia in search of an earthly utopia. In Thailand, he is given a map promising an unknown island, a secluded beach – and a new way of life. What Richard finds when he gets there is breathtaking: more extraordinary, more frightening than his wildest dreams.' +
         'But how long can paradise survive here on Earth? And what lengths will Richard go to in order to save it?',
-      price: 20,
-      inStore: 30
+      price: 20,  
     },
     {
       id: 'b15',
@@ -193,8 +179,7 @@ const loadTestData = async () => {
         'So how do you know what really happened that night?' +
         'One rainy night in New York, psychologist James Cobb gives a talk on the art of recovering lost memories. Afterwards, he’s approached by a stranger: a dying man who, forty years ago, woke up in a hotel room with a murdered woman, and no memory at all of what happened. Now, he needs to know whether he was an innocent bystander – or a killer.' +
         'Intrigued, James begins to unpick the tangled threads of this decades-old mystery. But everyone involved has a different story to tell, and every fact he uncovers has another interpretation. As his interest becomes an obsession, and secrets from his own past start to surface, he begins to suspect that someone has buried the truth deep enough to hide it forever.',
-      price: 20,
-      inStore: 30
+      price: 20,  
     },
     {
       id: 'b16',
@@ -209,8 +194,7 @@ const loadTestData = async () => {
         'You want to be the good mother you dreamed you could be.\n'+
         'But you’re not. You’re the bad mother you were destined to become.\n' +
         'At least, that what he wants you to believe…',
-      price: 20,
-      inStore: 30
+      price: 30, 
     }
   ];
 

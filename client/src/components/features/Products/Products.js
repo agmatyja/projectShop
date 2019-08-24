@@ -29,7 +29,7 @@ class Products extends React.Component {
     }
     if (!request.pending && request.success && products !== null && products.length > 0) 
         return <div>
-          <ProductsList products={products} />
+          <ProductsList products={products} inCart={false} />
           <Pagination pages={pages} onPageChange={this.loadProductsPage} initialPage={initialPage || 1}/>
         </div>;
     if (request.pending || request.success === null)
@@ -53,7 +53,6 @@ Products.propTypes = {
       image: PropTypes.string,
       description: PropTypes.string.isRequired,
       price: PropTypes.number.isRequired,
-      inStore: PropTypes.number.isRequired,
     })
   ),
   loadProductsByPage: PropTypes.func.isRequired,

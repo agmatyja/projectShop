@@ -10,7 +10,8 @@ export const getProduct = ({ products }) => products.product;
 export const getPages = ({ products }) => Math.ceil(products.amount / products.productsPerPage);
 export const getPresentPage = ({ products }) => products.presentPage;
 export const getSort = ({ products }) => products.sort;
-
+export const getCart = ({ products }) => products.cart;
+export const getStore = ({ products }) => products.store;
 
 /* ACTIONS */
 
@@ -26,6 +27,11 @@ export const ERROR_REQUEST = createActionName('ERROR_REQUEST');
 export const RESET_REQUEST = createActionName('RESET_REQUEST');
 export const LOAD_PRODUCTS_BY_PAGE = createActionName('LOAD_PRODUCTS_PAGE');
 export const SORT_PRODUCTS = createActionName('SORT_PRODUCTS');
+export const ADD_CART_PRODUCT = createActionName('ADD_CART_PRODUCT');
+export const REMOVE_CART_PRODUCT = createActionName('REMOVE_CART_PRODUCT');
+export const DELETE_CART_PRODUCT = createActionName('DELETE_CART_PRODUCT');
+export const ADD_PROMOTION_CART_PRODUCT = createActionName('ADD_PROMOTION_CART_PRODUCT');
+export const CART_PAY = createActionName('CART_PAY');
 
 export const loadProducts = payload => ({ payload, type: LOAD_PRODUCTS });
 export const loadProduct = payload => ({ payload, type: LOAD_PRODUCT });
@@ -35,6 +41,11 @@ export const errorRequest = error => ({ error, type: ERROR_REQUEST });
 export const resetRequest = () => ({ type: RESET_REQUEST });
 export const loadProductsByPage = payload => ({ payload, type: LOAD_PRODUCTS_BY_PAGE });
 export const sortProducts = payload => ({ payload, type: SORT_PRODUCTS });
+export const addCartProduct = payload => ({ payload, type: ADD_CART_PRODUCT});
+export const removeCartProduct = payload => ({ payload, type: REMOVE_CART_PRODUCT});
+export const deleteCartProduct = payload => ({ payload, type: DELETE_CART_PRODUCT});
+export const addPromotionCartProduct = payload => ({ payload, type: ADD_PROMOTION_CART_PRODUCT});
+export const cartPay = () => ({ type: CART_PAY });
 
 /* INITIAL STATE */
 
@@ -46,19 +57,56 @@ const initialState = {
     extraInfo: '',
     image: null,
     description: '',
-    price: 0,
-    inStore: 0
+    price: 0
   }],
   request: {
     success: false,
     error: null,
     pending: false
   },
-  cart: [{ productId: '1', quantity: 3}, { productId: '2', quantity: 2}],
-  sort: 'TITLE_ASC'
+  //cart: [{ productId: '1', quantity: 3}, { productId: '2', quantity: 2}],
+  cart: [],
+  sort: 'TITLE_ASC',
+  promotion: 0,
+  store: {}
 }
 
 /* REDUCER */
+
+const addToCart = (cart, id) => {
+  for (let cartItem of cart) {
+    if (cartItem.productId === id) {
+      cartItem.quantity++
+      return cart
+    }
+  }
+  cart.push({ productId: id, quantity: 1 });
+  return cart
+}
+
+const removeFromCart = (cart, id) => {
+  for (let cartItem of cart) {
+    if (cartItem.productId === id && cartItem.quantity > 0) {
+      cartItem.quantity--
+      return cart
+    }
+  }
+  return cart
+}
+
+const deleteFromCart = (cart, id) => {
+  cart.splice(cart.findIndex(function(i){
+    return i.productId === id;
+  }), 1);
+  return cart
+}
+
+const updateStore = (store, products) => {
+  for (let prod of products) {
+    store[prod.id] = prod;
+  }
+  return store
+}
 
 export default function reducer(statePart = initialState, action = {}) {
   switch (action.type) {
@@ -75,7 +123,17 @@ export default function reducer(statePart = initialState, action = {}) {
     case LOAD_PRODUCT:
       return { ...statePart, product: action.payload };
     case SORT_PRODUCTS:
-      return { ...statePart, data: null, sort: action.payload };	  
+      return { ...statePart, data: null, sort: action.payload };
+    case ADD_CART_PRODUCT:
+      return { ...statePart, cart: addToCart(statePart.cart, action.payload)};
+    case REMOVE_CART_PRODUCT:
+      return { ...statePart, cart: removeFromCart(statePart.cart, action.payload)};
+    case DELETE_CART_PRODUCT:
+      return { ...statePart, cart: deleteFromCart(statePart.cart, action.payload)};
+    case ADD_PROMOTION_CART_PRODUCT:
+      return { ...statePart, promotion: action.payload };
+    case CART_PAY:
+      return { ...statePart, promotion: 0, cart: [] };
 	  case LOAD_PRODUCTS_BY_PAGE:
       return {
         ...statePart,
@@ -83,7 +141,8 @@ export default function reducer(statePart = initialState, action = {}) {
         presentPage: action.payload.presentPage,
         amount: action.payload.amount,
         data: [...action.payload.products],
-    };
+        store: updateStore(statePart.store, action.payload.products),
+      };
     default: 
 	    return statePart;
   }

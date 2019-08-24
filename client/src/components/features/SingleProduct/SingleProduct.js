@@ -17,10 +17,11 @@ class SingleProduct extends React.Component {
 	 
     if (!request.pending && request.success && product) 
         return (
-  	      <article className="single-product">
+          <article className="single-product">
             <h2>{product.title}</h2>
             <b>{product.author}</b><br/>
-            <img src={`data:image/jpeg;base64,${product.image}`} />
+            ${product.price}
+            <img src={`data:image/jpeg;base64,${product.image}`} alt="cover"/>
             {product.description}
           </article>
     		);
@@ -44,7 +45,6 @@ SingleProduct.propTypes = {
     image: PropTypes.string,
     description: PropTypes.string.isRequired,
     price: PropTypes.number.isRequired,
-    inStore: PropTypes.number.isRequired,
   }),
   loadProduct: PropTypes.func.isRequired,
   id: PropTypes.string

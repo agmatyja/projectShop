@@ -5,14 +5,13 @@ import './ProductSummary.scss';
 import Button from '../../common/Button/Button';
 import SmallTitle from '../../common/SmallTitle/SmallTitle';
 
-const ProductSummary = ({ id, title, author, description, image, price, inStock }) => (
+const ProductSummary = ({ id, title, author, description, image, extraInfo, price, inCart }) => (
   <article className="product-summary">
     <SmallTitle>{title}</SmallTitle>
-	<p>Author: {author}</p>
-  <p>extraInfo</p>
-  <img src={`data:image/jpeg;base64,${image}`} />
-  <p>price</p>
-  <p>inStock</p>
+	  <p>Author: {author}</p>
+    <p>{extraInfo}</p>
+    <img src={`data:image/jpeg;base64,${image}`} alt="cover" />
+    <p>${price}</p>
   </article>
 );
 /*
@@ -22,12 +21,14 @@ const ProductSummary = ({ id, title, author, description, image, price, inStock 
 */
 
 ProductSummary.propTypes = {
-  id: PropTypes.string,
+  id: PropTypes.string.isRequired,
   title: PropTypes.string,
   author: PropTypes.string,
   description: PropTypes.string,
+  image: PropTypes.string,
+  extraInfo: PropTypes.string,
   price: PropTypes.number,
-  inStore: PropTypes.number
+  inCart: PropTypes.bool.isRequired
 };
 
 export default ProductSummary;

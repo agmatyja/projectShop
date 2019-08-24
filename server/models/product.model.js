@@ -9,8 +9,6 @@ const Product = new Schema({
   description: { type: 'String', required: true },
   image: { type: 'String', required: true },
   price: { type: 'Number', required: true },
-  inStore: { type: 'Number', required: true },
-
 });
 
 module.exports = mongoose.model('Product', Product);

@@ -2,16 +2,18 @@ import React from 'react';
 import './NavBar.scss';
 import Logo from '../../common/Logo/Logo';
 import MainMenu from '../../layout/MainMenu/MainMenu';
-class NavBar extends React.Component {
+import { faShoppingBag } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+
+class NavBar extends React.Component {
 state = {
   links: [
     { path: '/', title: 'Home' },
     { path: '/products/b1', title: 'FAQ' },
     { path: '/products', title: 'Terms of Use' },
     { path: '/contact', title: 'Contact' },
-    <i class="fas fa-shopping-bag"></i>
-//Download SVGPerfect for when you want to use just one icon as a vector on the desktop or in your own icon workflow.
+    { path: '/cart', title: (<FontAwesomeIcon icon={faShoppingBag} />)}
   ],
 }
 
