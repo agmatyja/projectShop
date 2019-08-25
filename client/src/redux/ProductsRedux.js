@@ -1,7 +1,6 @@
 import axios from 'axios';
 import { API_URL } from '../config';
 
-
 /* SELECTORS */
 export const getProducts = ({ products }) => products.data;
 export const getProductsCount = ({ products }) => products.amount;
@@ -12,6 +11,7 @@ export const getPresentPage = ({ products }) => products.presentPage;
 export const getSort = ({ products }) => products.sort;
 export const getCart = ({ products }) => products.cart;
 export const getStore = ({ products }) => products.store;
+export const getPromotion = ({products}) => products.promotion;
 export const getNumberOfCartItems = ({ products }) => {
   let count = 0;
   for (let product of products.cart) {
@@ -26,21 +26,19 @@ export const getNumberOfCartItems = ({ products }) => {
 const reducerName = 'products';
 const createActionName = name => `app/${reducerName}/${name}`;
 
-export const LOAD_PRODUCTS = createActionName('LOAD_PRODUCTS');
 export const LOAD_PRODUCT = createActionName('LOAD_PRODUCT');
 export const START_REQUEST = createActionName('START_REQUEST');
 export const END_REQUEST = createActionName('END_REQUEST');
 export const ERROR_REQUEST = createActionName('ERROR_REQUEST');
 export const RESET_REQUEST = createActionName('RESET_REQUEST');
-export const LOAD_PRODUCTS_BY_PAGE = createActionName('LOAD_PRODUCTS_PAGE');
+export const LOAD_PRODUCTS_BY_PAGE = createActionName('LOAD_PRODUCTS_BY_PAGE');
 export const SORT_PRODUCTS = createActionName('SORT_PRODUCTS');
 export const ADD_CART_PRODUCT = createActionName('ADD_CART_PRODUCT');
 export const REMOVE_CART_PRODUCT = createActionName('REMOVE_CART_PRODUCT');
 export const DELETE_CART_PRODUCT = createActionName('DELETE_CART_PRODUCT');
-export const ADD_PROMOTION_CART_PRODUCT = createActionName('ADD_PROMOTION_CART_PRODUCT');
+export const ADD_DISCOUNT_CODE = createActionName('ADD_DISCOUNT_CODE');
 export const CART_PAY = createActionName('CART_PAY');
 
-export const loadProducts = payload => ({ payload, type: LOAD_PRODUCTS });
 export const loadProduct = payload => ({ payload, type: LOAD_PRODUCT });
 export const startRequest = () => ({ type: START_REQUEST });
 export const endRequest = () => ({ type: END_REQUEST });
@@ -51,7 +49,7 @@ export const sortProducts = payload => ({ payload, type: SORT_PRODUCTS });
 export const addCartProduct = payload => ({ payload, type: ADD_CART_PRODUCT});
 export const removeCartProduct = payload => ({ payload, type: REMOVE_CART_PRODUCT});
 export const deleteCartProduct = payload => ({ payload, type: DELETE_CART_PRODUCT});
-export const addPromotionCartProduct = payload => ({ payload, type: ADD_PROMOTION_CART_PRODUCT});
+export const addDiscountCode = payload => ({ payload, type: ADD_DISCOUNT_CODE});
 export const cartPay = () => ({ type: CART_PAY });
 
 /* INITIAL STATE */
@@ -117,8 +115,6 @@ const updateStore = (store, products) => {
 
 export default function reducer(statePart = initialState, action = {}) {
   switch (action.type) {
-    case LOAD_PRODUCTS:
-      return { ...statePart, data: action.payload };
 	  case START_REQUEST:
       return { ...statePart, request: { pending: true } };
     case END_REQUEST:
@@ -128,7 +124,7 @@ export default function reducer(statePart = initialState, action = {}) {
 	  case RESET_REQUEST:
       return { ...statePart, request: { pending: false, error: null, success: null } };  
     case LOAD_PRODUCT:
-      return { ...statePart, product: action.payload };
+      return { ...statePart, product: action.payload, store: updateStore(statePart.store, [action.payload]) };
     case SORT_PRODUCTS:
       return { ...statePart, data: null, sort: action.payload };
     case ADD_CART_PRODUCT:
@@ -137,7 +133,7 @@ export default function reducer(statePart = initialState, action = {}) {
       return { ...statePart, cart: removeFromCart(statePart.cart, action.payload)};
     case DELETE_CART_PRODUCT:
       return { ...statePart, cart: deleteFromCart(statePart.cart, action.payload)};
-    case ADD_PROMOTION_CART_PRODUCT:
+    case ADD_DISCOUNT_CODE:
       return { ...statePart, promotion: action.payload };
     case CART_PAY:
       return { ...statePart, promotion: 0, cart: [] };

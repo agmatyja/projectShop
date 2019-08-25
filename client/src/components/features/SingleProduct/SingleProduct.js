@@ -13,9 +13,10 @@ class SingleProduct extends React.Component {
     loadProduct(this.props.id);
   }
 
-  onAddToCart = () => {
-    const { product, addCartProduct } = this.props;
+  addToCart = () => {
+    const { product, addCartProduct, history } = this.props;
     addCartProduct(product.id);
+    history.push('/added')
   }
 
   render() {
@@ -29,8 +30,8 @@ class SingleProduct extends React.Component {
             <img src={`data:image/jpeg;base64,${product.image}`} alt="cover"/>
             <br/>
             <b>${product.price}</b>
-            <button onClick={this.onAddToCart}>Add to cart</button>
-            <HtmlBox>{product.description.replace(/\n/g,"<br/>")}</HtmlBox>
+            <button onClick={this.addToCart}>Add to cart</button>
+            <HtmlBox>{product.description.replace(/\n/g,"<br />")}</HtmlBox>
           </article>
     		);
     if (request.pending || request.success === null)

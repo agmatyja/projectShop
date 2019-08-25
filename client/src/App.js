@@ -12,12 +12,12 @@ import Cart from './components/pages/Cart/CartPage';
 import NotFound from './components/pages/NotFound/NotFoundPage';
 
 class App extends React.Component {
-
   render() {
     return (
       <MainLayout>
         <Switch>
           <Route path="/" exact component={Home} />
+          <Route path="/added" component={() => <Home added={true}/>} />
           <Route path="/products" exact component={Products} />
           <Route path="/contact" exact component={Contact} />
           <Route path="/products/:id" exact component={SingleProduct} />

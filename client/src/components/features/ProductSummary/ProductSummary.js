@@ -18,10 +18,11 @@ const ProductSummary = ({ id, title, author, description, image, quantity, extra
     </Link>
     {inCart
       ? <p>
-          <span>Quantity: {quantity}</span>
-          <button onClick={() => addCartProduct(id)}>+</button> 
-          <button onClick={() => removeCartProduct(id)}>-</button>
-          <button onClick={() => deleteCartProduct(id)}>x</button>
+          <span>Quantity: </span>
+          <button className="remove-button" onClick={() => removeCartProduct(id)}>-</button>
+          <span>{quantity}</span>
+          <button className="add-button" onClick={() => addCartProduct(id)}>+</button> 
+          <button className="delete-button" onClick={() => deleteCartProduct(id)}>remove product</button>
         </p>
       : null}
   </article>

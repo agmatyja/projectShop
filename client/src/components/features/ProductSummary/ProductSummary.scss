@@ -9,12 +9,16 @@
     cursor: pointer;
     width: 50%;
     display: inline-block;
-}
 
-.product-summary:hover {
-    margin-left: -$base-size*2;
-    margin-top: -$base-size / 5;
-    border-radius: $radius;
-    box-shadow: 0 0 20px rgba(0,0,0,0.1);
-    padding-left: $base-size * 1.5;
+    .delete-button {
+        color: red;
+    }
+
+    &:hover {
+        margin-left: -$base-size*2;
+        margin-top: -$base-size / 5;
+        border-radius: $radius;
+        box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        padding-left: $base-size * 1.5;
+    }
 }
