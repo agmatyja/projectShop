@@ -50,7 +50,7 @@ export const addCartProduct = payload => ({ payload, type: ADD_CART_PRODUCT});
 export const removeCartProduct = payload => ({ payload, type: REMOVE_CART_PRODUCT});
 export const deleteCartProduct = payload => ({ payload, type: DELETE_CART_PRODUCT});
 export const addDiscountCode = payload => ({ payload, type: ADD_DISCOUNT_CODE});
-export const cartPay = () => ({ type: CART_PAY });
+export const cartPay = () => {console.log(111); return ({ type: CART_PAY })};
 
 /* INITIAL STATE */
 

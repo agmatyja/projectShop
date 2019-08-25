@@ -14,8 +14,9 @@ class Cart extends React.Component {
   }
 
   cartPay = () => {
-    const { cartPay } = this.props;
+    const { cartPay, history } = this.props;
     cartPay();
+    history.push('/payment')
   }
 
   addCartProduct = (id) => {
@@ -59,7 +60,6 @@ class Cart extends React.Component {
       total += store[item.productId].price * item.quantity;
       return {...store[item.productId], quantity: item.quantity}}
     );
-    console.log(promotion);
 
     return <div>
       <ProductsList products={products} inCart={true} addCartProduct={this.addCartProduct} removeCartProduct={this.removeCartProduct} deleteCartProduct={this.deleteCartProduct} />

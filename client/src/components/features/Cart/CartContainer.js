@@ -13,7 +13,7 @@ const mapDispatchToProps = dispatch => ({
   removeCartProduct: (productId) => dispatch(removeCartProduct(productId)),
   deleteCartProduct: (productId) => dispatch(deleteCartProduct(productId)),
   addDiscountCode: (percent) => dispatch(addDiscountCode(percent)),
-  cartPay: () => dispatch= () => dispatch(cartPay()),
+  cartPay: () => dispatch(cartPay()),
 });
 
 
