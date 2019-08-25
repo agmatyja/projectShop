@@ -1,20 +1,6 @@
 const Product = require('../models/product.model');
 
-// get all products
-
-exports.getProducts = async (req, res) => {
-
-    try {
-      res.status(200).json(await Product.find());
-    } catch(err) {
-      console.log(err);
-      res.status(500).json(err);
-    }
-
-};
-
 //get single product
-
 exports.getProduct = async (req, res) => {
 
     try {
@@ -30,26 +16,6 @@ exports.getProduct = async (req, res) => {
     }
 
 };
-
-// add new product
-exports.addProduct = async function (req, res) {
-
-  try {
-    const { title, author, content } = req.body;
-
-    let newProduct = new Product(req.body);
-	const uuid = require('uuid');
-    newProduct.id = uuid();
-
-    productSaved = await newProduct.save();
-    res.status(200).json(productSaved);
-
-  } catch(err) {
-    console.log(err);
-    res.status(500).json(err);
-  }
-
-}
 
 const sortParam = {
   'TITLE_ASC' : {'title': 1, 'lastName': 1, 'author': 1},
