@@ -6,11 +6,20 @@ import ProductSummary from '../ProductSummary/ProductSummary';
 class ProductsList extends React.Component {
 	
   render () {
-    const { products, inCart } = this.props;
+    const { products, inCart, addCartProduct, removeCartProduct, deleteCartProduct } = this.props;
     return (
       <div>
         <section className="products-list">
-          {products.map(product => <ProductSummary key={product.id} inCart={inCart} {...product} />)}
+          {products.map(product => 
+            <ProductSummary 
+              key={product.id} 
+              inCart={inCart} 
+              addCartProduct={addCartProduct} 
+              removeCartProduct={removeCartProduct} 
+              deleteCartProduct={deleteCartProduct} 
+              {...product} 
+            />
+          )}
         </section>
       </div>
     );
@@ -29,7 +38,10 @@ ProductsList.propTypes = {
       price: PropTypes.number.isRequired
     })
   ),
-  inCart: PropTypes.bool.isRequired
+  inCart: PropTypes.bool.isRequired,
+  addCartProduct: PropTypes.func,
+  removeCartProduct: PropTypes.func,
+  deleteCartProduct: PropTypes.func,
 };
 
 export default ProductsList;

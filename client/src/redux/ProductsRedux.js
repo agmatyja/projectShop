@@ -11,7 +11,7 @@ export const getPages = ({ products }) => Math.ceil(products.amount / products.p
 export const getPresentPage = ({ products }) => products.presentPage;
 export const getSort = ({ products }) => products.sort;
 export const getCart = ({ products }) => products.cart;
-export const getStore = ({ products }) => {console.log(products.store); return products.store};
+export const getStore = ({ products }) => products.store;
 
 /* ACTIONS */
 
@@ -74,15 +74,13 @@ const initialState = {
 /* REDUCER */
 
 const addToCart = (cart, id) => {
-  console.log(id);
   for (let cartItem of cart) {
     if (cartItem.productId === id) {
       cartItem.quantity++
-      return cart
+      return [...cart]
     }
   }
   cart.push({ productId: id, quantity: 1 });
-  console.log(cart);
   return cart
 }
 
@@ -90,7 +88,7 @@ const removeFromCart = (cart, id) => {
   for (let cartItem of cart) {
     if (cartItem.productId === id && cartItem.quantity > 0) {
       cartItem.quantity--
-      return cart
+      return [...cart]
     }
   }
   return cart
@@ -100,15 +98,14 @@ const deleteFromCart = (cart, id) => {
   cart.splice(cart.findIndex(function(i){
     return i.productId === id;
   }), 1);
-  return cart
+  return [...cart]
 }
 
 const updateStore = (store, products) => {
   for (let prod of products) {
     store[prod.id] = prod;
   }
-  console.log(store)
-  return store
+  return {...store}
 }
 
 export default function reducer(statePart = initialState, action = {}) {

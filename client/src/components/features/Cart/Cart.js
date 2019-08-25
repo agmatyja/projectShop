@@ -6,24 +6,21 @@ import Alert from '../../common/Alert/Alert';
 import { withRouter } from 'react-router-dom';
 
 class Cart extends React.Component {
-
   onCartPay = () => {
     const { cartPay } = this.props;
     cartPay();
   }
 
   render() {
-    const { store, cart } = this.props;
-    console.log(store);
+    const { store, cart, addCartProduct, removeCartProduct, deleteCartProduct } = this.props;
     if (cart.length === 0) 
       return <div>The cart is empty.</div>
-
+    console.log(cart);
     let products = cart.map(item => {
       return {...store[item.productId], quantity: item.quantity}}
     );
-    console.log(products);
     return <div>
-      <ProductsList products={products} inCart={true} />
+      <ProductsList products={products} inCart={true} addCartProduct={addCartProduct} removeCartProduct={removeCartProduct} deleteCartProduct={deleteCartProduct} />
       <button onClick={this.onCartPay}>Proceed to payment</button>
     </div>;
   }
