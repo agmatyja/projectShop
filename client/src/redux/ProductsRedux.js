@@ -11,7 +11,7 @@ export const getPages = ({ products }) => Math.ceil(products.amount / products.p
 export const getPresentPage = ({ products }) => products.presentPage;
 export const getSort = ({ products }) => products.sort;
 export const getCart = ({ products }) => products.cart;
-export const getStore = ({ products }) => products.store;
+export const getStore = ({ products }) => {console.log(products.store); return products.store};
 
 /* ACTIONS */
 
@@ -74,6 +74,7 @@ const initialState = {
 /* REDUCER */
 
 const addToCart = (cart, id) => {
+  console.log(id);
   for (let cartItem of cart) {
     if (cartItem.productId === id) {
       cartItem.quantity++
@@ -81,6 +82,7 @@ const addToCart = (cart, id) => {
     }
   }
   cart.push({ productId: id, quantity: 1 });
+  console.log(cart);
   return cart
 }
 
@@ -105,6 +107,7 @@ const updateStore = (store, products) => {
   for (let prod of products) {
     store[prod.id] = prod;
   }
+  console.log(store)
   return store
 }
 
@@ -150,24 +153,6 @@ export default function reducer(statePart = initialState, action = {}) {
 
 /* THUNKS */
 
-export const loadProductsRequest = () => {
-  return async dispatch => {
-
-    dispatch(startRequest());
-    try {
-
-      let res = await axios.get(`${API_URL}/products`);
-      dispatch(loadProducts(res.data));
-      dispatch(endRequest());
-
-    } catch(e) {	
-      console.log(e)
-	    dispatch(errorRequest(e.message));
-    }
-
-  };
-};
-
 export const loadProductRequest = (id) => {
   return async dispatch => {
 
@@ -185,23 +170,6 @@ export const loadProductRequest = (id) => {
   	  } else {
   	    dispatch(errorRequest(e.message));
   	  }
-    }
-
-  };
-};
-
-export const addProductRequest = (product) => {
-  return async dispatch => {
-
-    dispatch(startRequest());
-    try {
-
-      await axios.post(`${API_URL}/products`, product);
-      dispatch(endRequest());
-
-    } catch(e) {
-      console.log(e)
-      dispatch(errorRequest(e.message));
     }
 
   };

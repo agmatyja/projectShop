@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { PropTypes } from 'prop-types';
 import './ProductSummary.scss';
 
@@ -6,15 +7,16 @@ import Button from '../../common/Button/Button';
 import SmallTitle from '../../common/SmallTitle/SmallTitle';
 
 const ProductSummary = ({ id, title, author, description, image, extraInfo, price, inCart }) => (
-  <a href={"/products/" + id}>
+  <Link to={"/products/" + id}>
     <article className="product-summary">
       <SmallTitle>{title}</SmallTitle>
   	  <p>Author: {author}</p>
       <p>{extraInfo}</p>
       <img src={`data:image/jpeg;base64,${image}`} alt="cover" />
+      <br/>
       <p>${price}</p>
     </article>
-  </a>
+  </Link>
 );
 
 ProductSummary.propTypes = {

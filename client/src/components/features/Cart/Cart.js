@@ -7,26 +7,30 @@ import { withRouter } from 'react-router-dom';
 
 class Cart extends React.Component {
 
+  onCartPay = () => {
+    const { cartPay } = this.props;
+    cartPay();
+  }
+
   render() {
     const { store, cart } = this.props;
-    let products = cart.map(item => {return {...store[item.id], quantity: item.quantity}});
+    console.log(store);
+    if (cart.length === 0) 
+      return <div>The cart is empty.</div>
 
+    let products = cart.map(item => {
+      return {...store[item.productId], quantity: item.quantity}}
+    );
+    console.log(products);
     return <div>
       <ProductsList products={products} inCart={true} />
+      <button onClick={this.onCartPay}>Proceed to payment</button>
     </div>;
   }
 }
 
 Cart.propTypes = {
-  store: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    extraInfo: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-	  author: PropTypes.string.isRequired,
-    image: PropTypes.string,
-    price: PropTypes.number.isRequired,
-    quantity: PropTypes.number.isRequired,
-  })),
+  store: PropTypes.object,
   cart: PropTypes.arrayOf(PropTypes.shape({
     productId: PropTypes.string.isRequired,
     quantity: PropTypes.number.isRequired,

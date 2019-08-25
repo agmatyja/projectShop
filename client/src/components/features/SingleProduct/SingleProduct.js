@@ -13,6 +13,11 @@ class SingleProduct extends React.Component {
     loadProduct(this.props.id);
   }
 
+  onAddToCart = () => {
+    const { product, addCartProduct } = this.props;
+    addCartProduct(product.id);
+  }
+
   render() {
     const { product, request } = this.props;
 	 
@@ -22,7 +27,9 @@ class SingleProduct extends React.Component {
             <h2>{product.title}</h2>
             <b>{product.author}</b><br/>
             <img src={`data:image/jpeg;base64,${product.image}`} alt="cover"/>
+            <br/>
             <b>${product.price}</b>
+            <button onClick={this.onAddToCart}>Add to cart</button>
             <HtmlBox>{product.description.replace(/\n/g,"<br/>")}</HtmlBox>
           </article>
     		);
@@ -48,6 +55,8 @@ SingleProduct.propTypes = {
     price: PropTypes.number.isRequired,
   }),
   loadProduct: PropTypes.func.isRequired,
+  addCartProduct: PropTypes.func.isRequired,
+
   id: PropTypes.string
 };
 
