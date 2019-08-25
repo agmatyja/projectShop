@@ -2,6 +2,7 @@ import React from 'react';
 import { PropTypes } from 'prop-types';
 import Spinner from '../../common/Spinner/Spinner';
 import Alert from '../../common/Alert/Alert';
+import HtmlBox from '../../common/HtmlBox/HtmlBox';
 
 import { withRouter } from 'react-router-dom';
 
@@ -20,9 +21,9 @@ class SingleProduct extends React.Component {
           <article className="single-product">
             <h2>{product.title}</h2>
             <b>{product.author}</b><br/>
-            ${product.price}
             <img src={`data:image/jpeg;base64,${product.image}`} alt="cover"/>
-            {product.description}
+            <b>${product.price}</b>
+            <HtmlBox>{product.description.replace(/\n/g,"<br/>")}</HtmlBox>
           </article>
     		);
     if (request.pending || request.success === null)
