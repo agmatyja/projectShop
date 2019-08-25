@@ -12,6 +12,13 @@ export const getPresentPage = ({ products }) => products.presentPage;
 export const getSort = ({ products }) => products.sort;
 export const getCart = ({ products }) => products.cart;
 export const getStore = ({ products }) => products.store;
+export const getNumberOfCartItems = ({ products }) => {
+  let count = 0;
+  for (let product of products.cart) {
+    count += product.quantity
+  }
+  return count
+};
 
 /* ACTIONS */
 
@@ -77,7 +84,7 @@ const addToCart = (cart, id) => {
   for (let cartItem of cart) {
     if (cartItem.productId === id) {
       cartItem.quantity++
-      return [...cart]
+      return [...cart] // make a copy of the cart to trigger Redux
     }
   }
   cart.push({ productId: id, quantity: 1 });
@@ -88,7 +95,7 @@ const removeFromCart = (cart, id) => {
   for (let cartItem of cart) {
     if (cartItem.productId === id && cartItem.quantity > 0) {
       cartItem.quantity--
-      return [...cart]
+      return [...cart] // make a copy of the cart to trigger Redux
     }
   }
   return cart
@@ -98,7 +105,7 @@ const deleteFromCart = (cart, id) => {
   cart.splice(cart.findIndex(function(i){
     return i.productId === id;
   }), 1);
-  return [...cart]
+  return [...cart] // make a copy of the cart to trigger Redux
 }
 
 const updateStore = (store, products) => {

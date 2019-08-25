@@ -7,26 +7,24 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
 class NavBar extends React.Component {
-state = {
-  links: [
-    { path: '/', title: 'Home' },
-    { path: '/products/b1', title: 'FAQ' },
-    { path: '/products', title: 'Terms of Use' },
-    { path: '/contact', title: 'Contact' },
-    { path: '/cart', title: (<FontAwesomeIcon icon={faShoppingBag} />)}
-  ],
-}
 
-render() {
-  const { links } = this.state;
+  render() {
+    const count = this.props.count;
+    const links = [
+      { path: '/', title: 'Home' },
+      { path: '/products/b1', title: 'FAQ' },
+      { path: '/products', title: 'Terms of Use' },
+      { path: '/contact', title: 'Contact' },
+      { path: '/cart', title: (<span><FontAwesomeIcon icon={faShoppingBag} /> {count > 0 ? <span>({count})</span> : null}</span>)}
+    ]
 
-  return (
-    <nav className="navbar">
-      <Logo />
-      <MainMenu links={links} />
-    </nav>
-  );
-}
+    return (
+      <nav className="navbar">
+        <Logo />
+        <MainMenu links={links} />
+      </nav>
+    );
+  }
 
 }
 
