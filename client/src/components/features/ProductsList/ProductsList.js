@@ -1,5 +1,7 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
+import './ProductsList.scss';
+
 
 import ProductSummary from '../ProductSummary/ProductSummary';
 

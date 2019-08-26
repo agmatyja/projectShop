@@ -9,12 +9,12 @@ import SmallTitle from '../../common/SmallTitle/SmallTitle';
 const ProductSummary = ({ id, title, author, description, image, quantity, extraInfo, price, inCart, addCartProduct, removeCartProduct, deleteCartProduct }) => (
   <article className="product-summary">
     <Link to={"/products/" + id}>
+      <p className="extra">{extraInfo}</p><br/>
       <img src={`data:image/jpeg;base64,${image}`} alt="cover" />
       <SmallTitle>{title}</SmallTitle>
   	  <p>Author: {author}</p>
-      <p>{extraInfo}</p><br/>
-      {inCart ? <p>{description}<br /></p> : null}
-      <p>Price: ${price}</p>
+      {inCart ? <p className="description">{description}<br /></p> : null}
+      <p className="price">Price: ${price}</p>
     </Link>
     {inCart
       ? <p>

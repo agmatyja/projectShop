@@ -14,8 +14,8 @@ class NavBar extends React.Component {
     const count = this.props.count;
     const links = [
       { path: '/', title: 'Home' },
-      { path: '/products/b1', title: 'FAQ' },
-      { path: '/products', title: 'Terms of Use' },
+      { path: '/faq', title: 'FAQ' },
+      { path: '/Terms of use', title: 'Terms of Use' },
       { path: '/contact', title: 'Contact' },
       { path: '/cart', title: (<span><FontAwesomeIcon icon={faShoppingBag} /> {count > 0 ? <span>({count})</span> : null}</span>)}
     ]

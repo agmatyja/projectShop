@@ -1,5 +1,6 @@
 @import './settings.scss';
 @import './normalize.scss';
+@import './typography.scss';
 
 
 *, *::before, *::after {
@@ -10,7 +11,7 @@ body {
   margin: 0;
   padding: 0;
   color: $color-text-light;
-  background: url(../resources/images/background.jpg) no-repeat center fixed;
+  background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), url(../resources/images/background.jpg) no-repeat center fixed;
   background-size: cover;
   font-family: $font-text;
   font-size: ($base-size * 1.3);
@@ -23,4 +24,3 @@ a, a:hover, a:visited {
   text-decoration: none;
 }
 
-@import './typography.scss';
