@@ -3,7 +3,7 @@ import { PropTypes } from 'prop-types';
 import Spinner from '../../common/Spinner/Spinner';
 import Alert from '../../common/Alert/Alert';
 import HtmlBox from '../../common/HtmlBox/HtmlBox';
-
+import './SingleProduct.scss';
 import { withRouter } from 'react-router-dom';
 
 class SingleProduct extends React.Component {
@@ -25,13 +25,15 @@ class SingleProduct extends React.Component {
     if (!request.pending && request.success && product) 
         return (
           <article className="single-product">
-            <h2>{product.title}</h2>
-            <b>{product.author}</b><br/>
-            <img src={`data:image/jpeg;base64,${product.image}`} alt="cover"/>
-            <br/>
-            <b>${product.price}</b>
-            <button onClick={this.addToCart}>Add to cart</button>
-            <HtmlBox>{product.description.replace(/\n/g,"<br />")}</HtmlBox>
+            <div className="first"><img src={`data:image/jpeg;base64,${product.image}`} alt="cover"/></div>
+            <div className="second">
+              <h2>{product.title}</h2><h2>{product.extraInfo}</h2>
+              <b>{product.author}</b><br/>
+              <br/>
+              <HtmlBox>{product.description.replace(/\n/g,"<br />")}</HtmlBox>
+              <b className="price">${product.price}</b><br/>
+              <br/><br/><button onClick={this.addToCart}>Add to cart</button>  
+            </div>
           </article>
     		);
     if (request.pending || request.success === null)

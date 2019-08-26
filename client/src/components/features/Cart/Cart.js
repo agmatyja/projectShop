@@ -22,7 +22,7 @@ class Cart extends React.Component {
   addCartProduct = (id) => {
     const { addCartProduct } = this.props;
     addCartProduct(id);
-    ToastsStore.success('Item added to the cart')    
+    ToastsStore.warning('Item added to the cart')    
   }
 
   removeCartProduct = (id) => {
@@ -45,7 +45,7 @@ class Cart extends React.Component {
 
     if (e.target.value === 'promo') {
       addDiscountCode(10)
-      ToastsStore.success('Discount code added! Now use have 10% discount!');
+      ToastsStore.warning('Discount code added! Now use have 10% discount!');
     }
   }
 

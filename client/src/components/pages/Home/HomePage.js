@@ -6,7 +6,7 @@ import {ToastsContainer, ToastsStore, ToastsContainerPosition} from 'react-toast
 const HomePage = ({added}) => {
   if (added) {
     setTimeout(() => {
-      ToastsStore.success('Item added to the cart.')  
+      ToastsStore.warning('Item added to the cart.')  
     })
   }
   return (
