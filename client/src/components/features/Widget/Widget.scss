@@ -1,17 +1,22 @@
 .widget {
+
 	p.sort {
 		a:hover {
 		  color: hotpink;
 		}
 
 		a:active {
-		  color: hotpink;
+		  color: blue;
 		}
 
 		&.active {
 		  a {
-		    color: blue;
+		    color: hotpink;
 		  }  
 		}
 	}
+	display: block;
+	position: fixed;
+	margin-top: 8%;
+	margin-left: 0;
 }

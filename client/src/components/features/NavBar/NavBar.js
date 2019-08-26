@@ -2,6 +2,8 @@ import React from 'react';
 import './NavBar.scss';
 import Logo from '../../common/Logo/Logo';
 import MainMenu from '../../layout/MainMenu/MainMenu';
+import FAQPage from '../../pages/FAQ/FAQPage';
+import TermsOfUsePage from '../../pages/TermsOfUse/TermsOfUsePage';
 import { faShoppingBag } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -20,8 +22,10 @@ class NavBar extends React.Component {
 
     return (
       <nav className="navbar">
+      
         <Logo />
         <MainMenu links={links} />
+
       </nav>
     );
   }

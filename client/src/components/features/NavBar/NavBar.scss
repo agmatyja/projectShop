@@ -1,5 +1,23 @@
 .navbar {
-	display: flexbox;
-	justify-content: space-between;
-	flex-wrap: wrap;
+    background-color: #16a085;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-left: 2%;
+    padding-right: 2%;    
+    height: 9%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    a {
+        color: #fff;
+        &.active {
+            color: #fff;
+            border-bottom: 1px solid #fff;
+        }
+        &:hover {
+            color: #fff;            
+        }
+    }
 }

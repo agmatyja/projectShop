@@ -1,6 +1,7 @@
 @import './settings.scss';
 @import './normalize.scss';
 
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -9,7 +10,8 @@ body {
   margin: 0;
   padding: 0;
   color: $color-text-light;
-  background: $color-background;
+  background: url(../resources/images/background.jpg) no-repeat center fixed;
+  background-size: cover;
   font-family: $font-text;
   font-size: ($base-size * 1.3);
   line-height: 1.7;
