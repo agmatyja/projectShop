@@ -54,11 +54,15 @@ const loadTestData = async () => {
     {
       id: 'b4',
       extraInfo: '',
-      title: 'The adventure of the Christmas pudding',
-      author: "Agatha Christie",
-      lastName: "Christie",
+      title: 'The bad begining',
+      author: "Lemony Snicket",
+      lastName: "Snicket",
       imageFile: 'book4.jpg',
-      description: 'In this delightful tale, an Eastern Prince arrives in England with some family jewels which he’s having reset as a gift for his fianceé. However, the Prince also has a mistress. She asks to wear one particularly enchanting piece that features a huge ruby, and then promptly disappears with it. Poirot discovers a connection with a house party at the home of Colonel and Mrs Lacey and, in order to pursue his investigation, an invitation is procured for him to the Laceys’, ostensibly to enjoy an old-fashioned Christmas. With deft skill and the workings of his little grey cells, Poirot brings this case to a satisfying and festive conclusion. Starring John Moffat as Hercule Poirot, with Donald Sinden and Siân Phillips as Colonel and Mrs Lacey.',
+      description: 'Dear reader,\n'+
+        'There is nothing to be found in these special tie-in editions of Lemony Snicket’s A Series of Unfortunate Events but misery and despair. You still have time to pick another bestselling, Emmy-nominated, Netflix-adapted series to read. But if you cannot be dissuaded, read on . . .\n'+
+        'Violet, Klaus, and Sunny Baudelaire are intelligent children. They are charming, and resourceful, and have pleasant facial features. Unfortunately, they are exceptionally unlucky.\n'+
+        'In The Bad Beginning, the siblings encounter a greedy and repulsive villain, itchy clothing, a disastrous fire, a plot to steal their fortune and cold porridge for breakfast.\n'+
+        'In the tradition of great storytellers, from Dickens to Dahl, comes an exquisitely dark comedy that is both literary and irreverent, hilarious and deftly crafted.hanting piece that features a huge ruby, and then promptly disappears with it. Poirot discovers a connection with a house party at the home of Colonel and Mrs Lacey and, in order to pursue his investigation, an invitation is procured for him to the Laceys’, ostensibly to enjoy an old-fashioned Christmas. With deft skill and the workings of his little grey cells, Poirot brings this case to a satisfying and festive conclusion. Starring John Moffat as Hercule Poirot, with Donald Sinden and Siân Phillips as Colonel and Mrs Lacey.',
       price: 20,
     },
     {
@@ -80,11 +84,16 @@ const loadTestData = async () => {
     {
       id: 'b6',
       extraInfo: '',
-      title: 'The lost plays',
-      author: "Agatha Christie",
-      lastName: "Christie",
+      title: 'Eldest',
+      author: "Christopher Paolini",
+      lastName: "Paolini",
       imageFile: 'book6.jpg',
-      description: 'A triple bill of archive BBC radio dramas, believed lost for over half a century and only recently rediscovered. Butter in a Lordly Dish, written specially for radio in 1948, features Richard Williams as Sir Luke Enderby KC, whose infidelities lead him into trouble when he goes to meet his latest flame. Williams also stars as Hercule Poirot in Murder in the Mews, a 1955 adaptation of a short story. A young woman is found dead in her flat, the day after Guy Fawkes night. Did she die by her own hand, or someone else’s? In Personal Call, also written specially for radio by Agatha Christie, a disturbing telephone call from a woman named Fay has consequences for both Richard Brent and his wife Pam. This 1960 production stars Ivan Brandt and Barbara Lott.',
+      description: 'Darkness falls . . . Despair abounds . . . Evil reigns . . .'+
+        'Fresh from their battle for the rebel state against King Galbatorix, Eragon has no time to rest.' +
+        'He and his dragon, Saphira, must travel to Ellesméra, the land of the elves for more training in magic and swordsmanship, the vital skills of a Dragon Rider.' +
+        'Even though he’s heading off on the journey of a lifetime, chaos and betrayal plague him at every turn, and Eragon doesn’t know who to trust.' +
+        'And while he’s off on his own journey, his cousin Roran must fight a new battle back home in Carvahall – one that puts Eragon in even graver danger.' +
+        'Will the king’s dark hand strangle all resistance? Eragon may not escape with even his life . . .',
       price: 20,
     },
     {
