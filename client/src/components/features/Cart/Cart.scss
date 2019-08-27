@@ -4,11 +4,17 @@
     flex-direction: column;
     float: right;
     margin-right: 20px;
+    height: 250px;
     
+    .promotion-info {
+      text-align: center;    
+    }
+
     .discount-code {
+      width: 210px;
       height: 30px;
       margin-top: 10px;
-      padding-left: 10px;
+      margin-left: 10px;
       text-align: center;
     }
 
@@ -29,12 +35,12 @@
     button {
       color: #fff;
       background: #16a085;
-      font-size:22px;
+      font-size: 22px;
       border-radius: 25%;    
       margin-left: 10px;
       width: 210px;
       height: 40px;
-      float:right;
+      float: right;
     }
   }
 

@@ -42,12 +42,7 @@
         display: inline-block;
     }
 
-    .price {
-        margin-bottom: 0;
-    }
-
-    .quantity, .delete-button {
-        margin-top: 0;
+    .price, .quantity, .delete-button {
         margin-bottom: 0;
     }
 
@@ -55,14 +50,16 @@
         color: #fff;
         background: #16a085;
         font-size:22px;
-        border-radius: 25%;    
+        border-radius: 25%;
     }
 
     button.delete-button {
+        position: relative;
+        top: -5px;
         margin-left: 10px;
         width: 210px;
         height: 40px;
-        float:right;
+        float: right;
     }
 
     .author, .price, .quantity {
@@ -72,8 +69,5 @@
     button.add-button, button.remove-button {
         margin-left: 10px;
         margin-right: 10px;
-    }
-    .quantity {
-        margin-left: 160px;
     }
 }

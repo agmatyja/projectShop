@@ -15,8 +15,7 @@ class Cart extends React.Component {
   }
 
   cartPay = () => {
-    const { cartPay, history } = this.props;
-    cartPay();
+    const { history } = this.props;
     history.push('/payment')
   }
 
@@ -96,8 +95,7 @@ Cart.propTypes = {
   addCartProduct: PropTypes.func.isRequired,
   removeCartProduct: PropTypes.func.isRequired,
   deleteCartProduct: PropTypes.func.isRequired,
-  addDiscountCode: PropTypes.func.isRequired,
-  cartPay: PropTypes.func.isRequired,
+  addDiscountCode: PropTypes.func.isRequired
 };
 
 export default withRouter(props => <Cart {...props}/>);

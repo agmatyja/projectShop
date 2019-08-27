@@ -1,0 +1,30 @@
+.payment-summary {
+  text-align: center;
+
+  table {
+    margin-top: 100px;
+    display: inline-block;
+  }
+
+  th, td {
+    border-bottom: 1px solid #ddd;
+    width: 16%;
+    max-width: 150px;
+    &.left {
+      text-align: left;
+    }
+    &.wide {
+      width: 25%;
+      max-width: 300px;
+    }
+  }
+
+  .numbers {
+    text-align: center;
+  }
+
+  .total {
+    font-size: 20px;
+    font-weight: bold;
+  }
+}
