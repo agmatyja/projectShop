@@ -23,6 +23,6 @@ yarn run start-dev
 Code for 10% discount is "promo".
 
 ## Before pushing to Heroku
-- change API_URL in client/config.js
+- change API_URL in client/src/config.js
 - yarn run build-client
 
