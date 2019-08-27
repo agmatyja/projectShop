@@ -17,7 +17,7 @@ class Products extends React.Component {
   }
 
   render() {
-    const { products, request, cart, initialPage, pages, addCartProduct, removeCartProduct, deleteCartProduct } = this.props;
+    const { products, request, initialPage, pages, addCartProduct, removeCartProduct, deleteCartProduct } = this.props;
     if (products === null && !request.pending && !request.error) {
         this.loadProductsPage(initialPage);
         return <Spinner />;
