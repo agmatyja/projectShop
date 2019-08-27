@@ -224,6 +224,7 @@ const loadTestData = async () => {
   ];
 
   try {
+    console.log(__dirname);
     let counter = await Product.countDocuments();
     if (counter === 0) {
       console.log('No products. Loading data...');

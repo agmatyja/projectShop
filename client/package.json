@@ -21,7 +21,6 @@
     "react-transition-group": "^4.2.2",
     "react-facebook": "8.0.4",
     "react-html-parser": "2.0.2",
-    "react-medium-editor": "1.8.1",
     "react-redux": "7.0.1",
     "reactstrap": "^8.0.1",
     "redux": "4.0.1",
