@@ -21,11 +21,6 @@
         padding-right: 20px;
     }
 
-    .delete-button {
-        color: hotpink;
-        margin: 15px auto;
-    }
-
     a {
         display: flex;
     }
@@ -54,5 +49,28 @@
     .quantity, .delete-button {
         margin-top: 0;
         margin-bottom: 0;
+    }
+
+    button {
+        color: #fff;
+        background: #16a085;
+        font-size:22px;
+        border-radius: 35%;    
+    }
+
+    button.delete-button {
+        margin-left: 10px;
+        width: 300px;
+        height: 40px;
+        float:right;
+    }
+
+    .author, .price, .quantity {
+        font-weight: bold;
+    }
+
+    button.add-button, button.remove-button {
+        margin-left: 10px;
+        margin-right: 10px;
     }
 }

@@ -17,19 +17,18 @@ class Products extends React.Component {
   }
 
   render() {
-    const { products, request, initialPage, pages, pagination, addCartProduct, removeCartProduct, deleteCartProduct } = this.props;
-
-	  if (!request.pending && request.success && products !== null && products.length > 0 && pagination === false) 
-        return <ProductsList products={products} />;
+    const { products, request, cart, initialPage, pages, addCartProduct, removeCartProduct, deleteCartProduct } = this.props;
+    console.log(cart);
     if (products === null && !request.pending && !request.error) {
         this.loadProductsPage(initialPage);
         return <Spinner />;
     }
-    if (!request.pending && request.success && products !== null && products.length > 0) 
+    if (!request.pending && request.success && products !== null && products.length > 0) {
         return <div>
           <ProductsList products={products} inCart={false} addCartProduct={addCartProduct} removeCartProduct={removeCartProduct} deleteCartProduct={deleteCartProduct} />
           <Pagination pages={pages} onPageChange={this.loadProductsPage} initialPage={initialPage || 1}/>
         </div>;
+    }
     if (request.pending || request.success === null)
         return <Spinner />;
     if (!request.pending && request.error !== null && request.error !== undefined)
@@ -61,7 +60,6 @@ Products.propTypes = {
   pages: PropTypes.number.isRequired,
   productsPerPage: PropTypes.number,
   sort: PropTypes.string,
-  pagination: PropTypes.bool,
 };
 
 export default Products;

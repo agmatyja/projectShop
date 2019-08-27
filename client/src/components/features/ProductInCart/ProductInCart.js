@@ -16,7 +16,7 @@ const ProductInCart = ({ id, title, author, description, image, quantity, extraI
       </div>
       <div className="second">
         <SmallTitle>{title}</SmallTitle>
-  	    <p>Author: {author}</p>
+  	    <p className="author">{author}</p>
         <p className="description">{cutText(description, 250)}</p>
         <p className="price">Price: ${price}</p>
       </div>
@@ -26,7 +26,7 @@ const ProductInCart = ({ id, title, author, description, image, quantity, extraI
       <button className="remove-button" onClick={() => removeCartProduct(id)}>-</button>
       <span>{quantity}</span>
       <button className="add-button" onClick={() => addCartProduct(id)}>+</button> 
-      <button className="delete-button" onClick={() => deleteCartProduct(id)}>remove product</button>
+      <button className="delete-button" onClick={() => deleteCartProduct(id)}>Remove product</button>
     </p>
   </article>
 );

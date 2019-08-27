@@ -49,7 +49,12 @@
         text-overflow: ellipsis;
         display: inline-block;
     }
+
+    &.bought {
+        filter: brightness(50%);
+    }
 }
+
 .relat {
     position: relative;
 }

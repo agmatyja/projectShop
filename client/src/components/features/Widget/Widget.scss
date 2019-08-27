@@ -13,9 +13,21 @@
 		  }  
 		}
 	}
-	display: block;
-	position: fixed;
-	margin-left: 0;
-	font-weight: 800;
-	width: 130px;
+
+	@media (max-width: 600px) {
+		p {
+			display: inline;
+			&:after {
+				content: " • ";
+			}			
+		}
+	}
+	
+	@media (min-width: 601px) {
+		display: block;
+		position: fixed;
+		margin-left: 0;
+		width: 130px;
+	}
+	font-weight: bold;
 }

@@ -4,6 +4,15 @@ import { API_URL } from '../config';
 /* SELECTORS */
 export const getProducts = ({ products }) => products.data;
 export const getProductsCount = ({ products }) => products.amount;
+export const getProductsWithQuantities = ({ products }) => {
+  if (!products.data) {
+    return products.data;
+  }
+  return products.data.map(prod => {
+    let cartItem = products.cart.find(item => item.productId === prod.id);
+    return {...prod, quantity: cartItem ? cartItem.quantity : 0};
+  });
+};
 export const getRequest = ({ products }) => products.request;
 export const getProduct = ({ products }) => products.product;
 export const getPages = ({ products }) => Math.ceil(products.amount / products.productsPerPage);

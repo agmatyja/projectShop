@@ -4,6 +4,7 @@ import { withRouter } from 'react-router-dom';
 import {ToastsContainer, ToastsStore, ToastsContainerPosition} from 'react-toasts';
 
 import ProductsList from '../ProductsList/ProductsList';
+import "./Cart.scss";
 
 class Cart extends React.Component {
   constructor(props) {
@@ -53,28 +54,33 @@ class Cart extends React.Component {
     const { store, cart, promotion } = this.props;
 
     if (cart.length === 0) 
-      return <div>The cart is empty.</div>
+      return <h1 className="center">The cart is empty.</h1>
     
-    let total = 0
     let products = cart.map(item => {
-      total += store[item.productId].price * item.quantity;
       return {...store[item.productId], quantity: item.quantity}}
     );
 
-    return <div>
+    let total = 0
+    products.forEach(item => {
+      total += item.price * item.quantity;      
+    })
+
+    return <div class="cart">
       <ProductsList products={products} inCart={true} addCartProduct={this.addCartProduct} removeCartProduct={this.removeCartProduct} deleteCartProduct={this.deleteCartProduct} />
-      {promotion > 0 ? 
-        <span>
-          <p>Discount code activated</p>
-          <p>Total: <s>${total}</s> ${total * (1 - promotion / 100)}</p>
-        </span>
-      :
-        <span>
-          <input placeholder="Discount code" value={this.state.promoCode} onChange={(e) => this.promoCodeChanged(e)}></input>
-          <p>Total: ${total}</p>
-        </span>
-      }            
-      <button onClick={this.cartPay}>Proceed to payment</button>
+      <div class="buy">
+        {promotion > 0 ? 
+          <>
+            <p className="promotion-info">10% discount code activated</p>
+            <p className="total">Total: <s>${total}</s> ${total * (1 - promotion / 100)}</p>
+          </>  
+        :
+          <>
+            <input className="discount-code" placeholder="Discount code" value={this.state.promoCode} onChange={(e) => this.promoCodeChanged(e)}></input>
+            <p className="total">Total: ${total}</p>
+          </>  
+        }            
+        <button class="pay" onClick={this.cartPay}>Proceed to payment</button>
+      </div>
       <ToastsContainer store={ToastsStore} position={ToastsContainerPosition.BOTTOM_CENTER}/>
     </div>;
   }

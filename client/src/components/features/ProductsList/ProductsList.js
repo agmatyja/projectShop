@@ -44,7 +44,8 @@ ProductsList.propTypes = {
       author: PropTypes.string.isRequired,
       image: PropTypes.string,
       description: PropTypes.string.isRequired,
-      price: PropTypes.number.isRequired
+      price: PropTypes.number.isRequired,
+      quantity: PropTypes.number
     })
   ),
   inCart: PropTypes.bool.isRequired,

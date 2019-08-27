@@ -13,7 +13,7 @@ const HomePage = ({added}) => {
   return (
     <div className="home">
       <Widget />
-      <Products productsPerPage={6} pagination={true} />
+      <Products productsPerPage={6} />
       <ToastsContainer store={ToastsStore} position={ToastsContainerPosition.BOTTOM_CENTER}/>
     </div>
   );
