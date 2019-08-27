@@ -45,7 +45,7 @@ class Cart extends React.Component {
 
     if (e.target.value === 'promo') {
       addDiscountCode(10)
-      ToastsStore.warning('Discount code added! Now use have 10% discount!');
+      ToastsStore.warning('Discount code added! Now you have 10% discount!');
     }
   }
 
