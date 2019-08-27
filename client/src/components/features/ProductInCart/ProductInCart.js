@@ -15,7 +15,7 @@ const ProductInCart = ({ id, title, author, description, image, quantity, extraI
       </div>
       <div className="second">
         <SmallTitle>{title}</SmallTitle>
-  	    <p className="author">{author}</p>
+        <p className="author">{author}</p>
         <p className="description">{cutText(description, 250)}</p>
         <p className="price">Price: ${price}</p>
       </div>

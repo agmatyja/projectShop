@@ -10,16 +10,16 @@ class Pagination extends React.Component {
   }
   
   render() { 
-    const { pages } = this.props;	
+    const { pages } = this.props;    
     const { presentPage } = this.state;
     const { changePage } = this;
     
     return (
       <div className="pagination">
         <ul className="pagination__list">
-		
-		  { presentPage > 1 ? <li key="less"
-		    onClick={() => { changePage(presentPage - 1) }}><a className="pagination__list__item">&lt;</a></li> : null}
+        
+          { presentPage > 1 ? <li key="less"
+          onClick={() => { changePage(presentPage - 1) }}><a className="pagination__list__item">&lt;</a></li> : null}
           {[...Array(pages || [])].map((el, page) =>
             <li
               key={++page}
@@ -28,9 +28,9 @@ class Pagination extends React.Component {
               {page}
             </li>
           )}
-		   
-		  { presentPage < pages ?   <li key="more"
-            onClick={() => { changePage(presentPage + 1) }}><a className="pagination__list__item">&gt;</a></li> : null}
+           
+          { presentPage < pages ?   <li key="more"
+          onClick={() => { changePage(presentPage + 1) }}><a className="pagination__list__item">&gt;</a></li> : null}
         </ul>
       </div>
     );

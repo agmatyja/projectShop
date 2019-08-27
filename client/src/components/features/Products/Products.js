@@ -35,7 +35,7 @@ class Products extends React.Component {
         return <Alert variant="error">{request.error}</Alert>;
     if (!request.pending && request.success && (products === null || products.length === 0)) 
         return <Alert variant="info">No products</Alert>;
-	
+
     return <Spinner />;
   }
 }
@@ -46,7 +46,7 @@ Products.propTypes = {
       id: PropTypes.string.isRequired,
       extraInfo: PropTypes.string.isRequired,
       title: PropTypes.string.isRequired,
-	    author: PropTypes.string.isRequired,
+      author: PropTypes.string.isRequired,
       image: PropTypes.string,
       description: PropTypes.string.isRequired,
       price: PropTypes.number.isRequired,

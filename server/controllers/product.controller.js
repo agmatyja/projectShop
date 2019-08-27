@@ -6,10 +6,10 @@ exports.getProduct = async (req, res) => {
     try {
       const productArr = await Product.find({ id: { $eq: req.params.id} })
       if (productArr.length === 1) {
-	      res.status(200).json(productArr[0]);
-	    } else {
-		    res.status(404).json({});
-	    }
+        res.status(200).json(productArr[0]);
+      } else {
+        res.status(404).json({});
+      }
     } catch(err) {
       console.log(err);
       res.status(500).json(err);

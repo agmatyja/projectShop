@@ -1,33 +1,33 @@
 .widget {
-	p.sort {
-		margin: 0;
-		cursor: pointer;
+  p.sort {
+    margin: 0;
+    cursor: pointer;
 
-		a:hover {
-		  color: hotpink;
-		}
+    a:hover {
+      color: hotpink;
+    }
 
-		&.active {
-		  a {
-		    color: hotpink;
-		  }  
-		}
-	}
+    &.active {
+      a {
+        color: hotpink;
+      }  
+    }
+  }
 
-	@media (max-width: 600px) {
-		p {
-			display: inline;
-			&:after {
-				content: " • ";
-			}			
-		}
-	}
-	
-	@media (min-width: 601px) {
-		display: block;
-		position: fixed;
-		margin-left: 0;
-		width: 130px;
-	}
-	font-weight: bold;
+  @media (max-width: 600px) {
+    p {
+      display: inline;
+      &:after {
+        content: " • ";
+      }      
+    }
+  }
+  
+  @media (min-width: 601px) {
+    display: block;
+    position: fixed;
+    margin-left: 0;
+    width: 130px;
+  }
+  font-weight: bold;
 }

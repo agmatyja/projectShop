@@ -1,38 +1,40 @@
 .cart {
-	.buy {
-		display: flex;
-		min-width: 500px;
-		width: 60%;
-		justify-content: space-between;
+  .buy {
+    display: flex;
+    min-width: 500px;
+    width: 60%;
+    justify-content: space-between;
+    float: right;
+    margin-right: 20px;
 
-		.discount-code {
-			height: 30px;
-			margin-top: 10px;
-		}
+    .discount-code {
+      height: 30px;
+      margin-top: 10px;
+      padding-left: 10px;
+    }
 
-		.total {
-			white-space: nowrap;
-		}
+    .total {
+      white-space: nowrap;
+    }
 
-		p {
-			line-height: 20px;
-			font-weight: bold;
-		}
+    p {
+      line-height: 20px;
+      font-weight: bold;
+    }
 
-		s {
-			font-weight: normal;
-		}
+    s {
+      font-weight: normal;
+    }
 
-	    button {
-	        color: #fff;
-	        background: #16a085;
-	        font-size:22px;
-	        border-radius: 35%;    
-	        margin-left: 10px;
-	        width: 300px;
-	        height: 50px;
-	        float:right;
-	    }
-
-	}
+    button {
+      color: #fff;
+      background: #16a085;
+      font-size:22px;
+      border-radius: 25%;    
+      margin-left: 10px;
+      width: 210px;
+      height: 40px;
+      float:right;
+    }
+  }
 }

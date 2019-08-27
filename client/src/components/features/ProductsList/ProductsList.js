@@ -6,7 +6,7 @@ import ProductInCart from '../ProductInCart/ProductInCart';
 import ProductSummary from '../ProductSummary/ProductSummary';
 
 class ProductsList extends React.Component {
-	
+
   render () {
     const { products, inCart, addCartProduct, removeCartProduct, deleteCartProduct } = this.props;
     return (

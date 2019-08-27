@@ -124,13 +124,13 @@ const updateStore = (store, products) => {
 
 export default function reducer(statePart = initialState, action = {}) {
   switch (action.type) {
-	  case START_REQUEST:
+    case START_REQUEST:
       return { ...statePart, request: { pending: true } };
     case END_REQUEST:
       return { ...statePart, request: { pending: false, success: true } };
-	  case ERROR_REQUEST:
+    case ERROR_REQUEST:
       return { ...statePart, request: { pending: false, error: action.error, success: false } };
-	  case RESET_REQUEST:
+    case RESET_REQUEST:
       return { ...statePart, request: { pending: false, error: null, success: null } };  
     case LOAD_PRODUCT:
       return { ...statePart, product: action.payload, store: updateStore(statePart.store, [action.payload]) };
@@ -146,7 +146,7 @@ export default function reducer(statePart = initialState, action = {}) {
       return { ...statePart, promotion: action.payload };
     case CART_PAY:
       return { ...statePart, promotion: 0, cart: [] };
-	  case LOAD_PRODUCTS_BY_PAGE:
+    case LOAD_PRODUCTS_BY_PAGE:
       return {
         ...statePart,
         productsPerPage: action.payload.productsPerPage,
@@ -156,7 +156,7 @@ export default function reducer(statePart = initialState, action = {}) {
         store: updateStore(statePart.store, action.payload.products),
       };
     default: 
-	    return statePart;
+      return statePart;
   }
 };
 
@@ -173,12 +173,12 @@ export const loadProductRequest = (id) => {
 
     } catch(e) {
       console.log(e);
-  	  if (e.response.status === 404) {
-  		  dispatch(loadProduct(null));  
+      if (e.response.status === 404) {
+        dispatch(loadProduct(null));  
         dispatch(endRequest());
-  	  } else {
-  	    dispatch(errorRequest(e.message));
-  	  }
+      } else {
+        dispatch(errorRequest(e.message));
+      }
     }
 
   };

@@ -55,12 +55,12 @@
         color: #fff;
         background: #16a085;
         font-size:22px;
-        border-radius: 35%;    
+        border-radius: 25%;    
     }
 
     button.delete-button {
         margin-left: 10px;
-        width: 300px;
+        width: 210px;
         height: 40px;
         float:right;
     }
@@ -72,5 +72,8 @@
     button.add-button, button.remove-button {
         margin-left: 10px;
         margin-right: 10px;
+    }
+    .quantity {
+        margin-left: 160px;
     }
 }

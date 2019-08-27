@@ -15,7 +15,7 @@ const ProductSummary = ({ id, title, author, description, image, quantity, extra
         </div>
         <div className="second">
           <SmallTitle>{title}</SmallTitle>
-    	    <p className="author">{author}</p>
+          <p className="author">{author}</p>
           <p className="price">Price: ${price}</p>
           {quantity > 0 ? <p className="quantity">Quantity: {quantity}</p> : null}
         </div>

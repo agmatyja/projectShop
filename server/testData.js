@@ -8,7 +8,7 @@ const loadTestData = async () => {
       id: 'b1',
       extraInfo: 'NEW',
       title: 'An evil mind',
-	    author: "Chris Carter",
+      author: "Chris Carter",
       lastName: "Carter",
       imageFile: 'book1.jpg',
       description: 'FROM THE AUTHOR OF THE SUNDAY TIMES NUMBER ONE BESTSELLER THE CALLER.\n' +
@@ -18,13 +18,13 @@ const loadTestData = async () => {
         '‚A touch of Patricia Cornwell about Chris Carter’s plotting’ Mail on Sunday\n'+
         '‚Gripping . . . not for the squeamish’ Heat\n'+
         '‚A page-turner’ Express',
-      price: 10,
+      price: 50,
     },
     {
       id: 'b2',
       extraInfo: 'SALE',
       title: '17th suspect',
-	    author: "James Patterson & Maxine Paetro",
+      author: "James Patterson & Maxine Paetro",
       lastName: "Patterson",
       imageFile: 'book2.jpg',
       description: 'The bestselling 17th novel in the Women’s Murder Club series\n' +
@@ -49,7 +49,7 @@ const loadTestData = async () => {
         'The Restaurant at the End of the Universe: When all issues of space, time, matter and the nature of being are resolved, only one question remains: Where shall we have dinner? The Restaurant at the End of the Universe provides the ultimate gastronomic experience and, for once, there is no morning after.\n'+
         'Life, the Universe and Everything: In consequence of a number of stunning catastrophes, Arthur Dent is surprised to find himself living in a hideously miserable cave on prehistoric Earth. And then, just as he thinks that things cannot possibly get any worse, they suddenly do.\n'+
         'So Long, and Thanks For All the Fish: Arthur Dent’s sense of reality is in its dickiest state when he suddenly finds the girl of his dreams. They go in search of God’s Final Message and, in a dramatic break with tradition, actually find it.lp you on the road.\n',
-      price: 20,
+      price: 60,
     },
     {
       id: 'b4',
@@ -63,12 +63,12 @@ const loadTestData = async () => {
         'Violet, Klaus, and Sunny Baudelaire are intelligent children. They are charming, and resourceful, and have pleasant facial features. Unfortunately, they are exceptionally unlucky.\n'+
         'In The Bad Beginning, the siblings encounter a greedy and repulsive villain, itchy clothing, a disastrous fire, a plot to steal their fortune and cold porridge for breakfast.\n'+
         'In the tradition of great storytellers, from Dickens to Dahl, comes an exquisitely dark comedy that is both literary and irreverent, hilarious and deftly crafted.hanting piece that features a huge ruby, and then promptly disappears with it. Poirot discovers a connection with a house party at the home of Colonel and Mrs Lacey and, in order to pursue his investigation, an invitation is procured for him to the Laceys’, ostensibly to enjoy an old-fashioned Christmas. With deft skill and the workings of his little grey cells, Poirot brings this case to a satisfying and festive conclusion. Starring John Moffat as Hercule Poirot, with Donald Sinden and Siân Phillips as Colonel and Mrs Lacey.',
-      price: 20,
+      price: 30,
     },
     {
       
       id: 'b5',
-      extraInfo: '',
+      extraInfo: 'NEW',
       title: 'The affair',
       author: "Amanda Brooke",
       lastName: "Brooke",
@@ -79,11 +79,11 @@ const loadTestData = async () => {
         'When Nina finds out that her fifteen-year-old daughter, Scarlett, is pregnant, her world falls apart.\n'+
         'Because Scarlet won’t tell anyone who the father is. And Nina is scared that the answer will destroy everything.\n'+
         'As the suspects mount – from Scarlett’s teacher to Nina’s new husband of less than a year – Nina searches for the truth: no matter what the cost.\n',
-      price: 20,
+      price: 40,
     },
     {
       id: 'b6',
-      extraInfo: '',
+      extraInfo: 'BESTSELLER',
       title: 'Eldest',
       author: "Christopher Paolini",
       lastName: "Paolini",
@@ -98,7 +98,7 @@ const loadTestData = async () => {
     },
     {
       id: 'b7',
-      extraInfo: '',
+      extraInfo: 'NEW',
       title: 'Agent in place',
       author: "Mark Greaney",
       lastName: "Greaney",
@@ -107,7 +107,7 @@ const loadTestData = async () => {
         'Fresh off his first mission back with the CIA, Court Gentry secures what seems like a cut-and-dried contract job: A group of expats in Paris hires him to kidnap the mistress of Syrian dictator Ahmed Azzam to get intel that could destabilize Azzam’s regime.' +
         'Court delivers Bianca Medina to the rebels, but his job doesn’t end there. She soon reveals that she has given birth to a son, the only heir to Azzam’s rule–and a potent threat to the Syrian president’s powerful wife.' +
         'Now, to get Bianca’s cooperation, Court must bring her son out of Syria alive. With the clock ticking on Bianca’s life, he goes off the grid in a free-fire zone in the Middle East–and winds up in the right place at the right time to take a shot at bringing one of the most brutal dictatorships on earth to a close…',
-      price: 20,
+      price: 60,
     },
     {
       id: 'b8',
@@ -122,11 +122,11 @@ const loadTestData = async () => {
         'On board she meets eighty-six-year-old Lady Emily Haywood – the owner of a priceless emerald necklace that she intends to leave to a museum after the cruise.' +
         'But three days out to sea Lady Emily is found dead – with the necklace missing. And the list of suspects is large and growing.' +
         'Celia sets out to find the killer, not realizing that she has put herself in mortal danger before the ship reaches its final destination…',
-      price: 20,
+      price: 50,
     },
     {
       id: 'b9',
-      extraInfo: '',
+      extraInfo: 'BESTSELLER',
       title: 'Angels and demons',
       author: "Dan Brown",
       lastName: "Brown",
@@ -134,11 +134,11 @@ const loadTestData = async () => {
       description: 'CERN Institute, Switzerland: a world-renowned scientist is found brutally murdered with a mysterious symbol seared onto his chest.' +
         'The Vatican, Rome: the College of Cardinals assembles to elect a new pope. Somewhere beneath them, an unstoppable bomb of terrifying power relentlessly counts down to oblivion.' +
         'In a breathtaking race against time, Harvard professor Robert Langdon must decipher a labyrinthine trail of ancient symbols if he is to defeat those responsible – the Illuminati, a secret brotherhood presumed extinct for nearly four hundred years, reborn to continue their deadly vendetta against their most hated enemy, the Catholic Church.',
-      price: 20,
+      price: 40,
     },
     {
       id: 'b10',
-      extraInfo: '',
+      extraInfo: 'SALE',
       title: 'The appeal',
       author: "John Grisham",
       lastName: "Grisham",
@@ -155,7 +155,7 @@ const loadTestData = async () => {
       lastName: "Christie",
       imageFile: 'book11.jpg',
       description: '‚You do see, don’t you, that she’s got to be killed? It’s the only solution.’ Even when on holiday in Jerusalem – the so-called City of Peace – Hercule Poirot can’t seem to escape the strains of death and murder. His first evening at the King Solomon Hotel finds the above phrase floating into his room from outside. What does it mean? Who is the speaker, and just how seriously should it be considered? Whilst Poirot struggles to resist the lure of a fresh mystery, he cannot suppress the foreboding in his heart. Also in residence at the hotel are the Boyntons, a nervous American family held tightly in the grip of their matriarch. Then there is the young medic Sarah King, plus Dr Theodore Gerard, an expert in the subject of schizophrenia. These and other guests are thrown together on an organised trip to the ancient city of Petra. Whilst love apparently blossoms for Miss King, death visits another member of the party. It is clearly murder, and there are a number of likely suspects. Only one man has the skill to distinguish between them: Hercule Poirot.',
-      price: 20, 
+      price: 30, 
     },
     {
       id: 'b12',
@@ -167,17 +167,17 @@ const loadTestData = async () => {
       description: 'They wanted the same things. Death – and an audience.' +
         'Eve Singer makes her living from death. As a TV crime reporter, she’ll go to any length to get the latest scoop.' +
         'But when a twisted serial killer starts using her to gain the publicity he craves, Eve must decide how far she’s willing to go – and how close she’ll let him get . . .',
-      price: 20, 
+      price: 50, 
     },
     {
       id: 'b13',
-      extraInfo: '',
+      extraInfo: 'SALE',
       title: 'Black coffee',
       author: "Agatha Christie",
       lastName: "Christie",
       imageFile: 'book13.jpg',
       description: 'Sir Claud Amory’s revolutionary new formula for a powerful explosive is stolen. Locking his house-guests in the library, Sir Claud switches off the lights to allow the thief to replace the formula, no questions asked. When the lights come on, he is dead, and Hercule Poirot and Captain Hastings have to unravel a tangle of family feuds, old flames and suspicious foreigners to find the killer and prevent a global catastrophe.',
-      price: 20,  
+      price: 10,  
     },
     {
       id: 'b14',
@@ -189,11 +189,11 @@ const loadTestData = async () => {
       description: 'A 20th anniversary edition of this million copy bestseller, with a new introduction by John Niven: a classic story of paradise found – and lost.' +
         'Richard lands in East Asia in search of an earthly utopia. In Thailand, he is given a map promising an unknown island, a secluded beach – and a new way of life. What Richard finds when he gets there is breathtaking: more extraordinary, more frightening than his wildest dreams.' +
         'But how long can paradise survive here on Earth? And what lengths will Richard go to in order to save it?',
-      price: 20,  
+      price: 30,  
     },
     {
       id: 'b15',
-      extraInfo: '',
+      extraInfo: 'BESTSELLER',
       title: 'Bad blood',
       author: "E.O. Chirovici",
       lastName: "Chirovici",
@@ -207,7 +207,7 @@ const loadTestData = async () => {
     },
     {
       id: 'b16',
-      extraInfo: '',
+      extraInfo: 'SALE',
       title: 'The bad mother',
       author: "Amanda Brooke",
       lastName: "Brooke",
@@ -236,7 +236,6 @@ const loadTestData = async () => {
   } catch (err) {
     console.log('Couldn\'t load test data', err);
   }
-
 };
 
 module.exports = loadTestData;

@@ -7,12 +7,12 @@ import './MainLayout.scss';
 const MainLayout = ({ children }) => (
   <div>
     <PageContainer>
-	  <NavBar />
-	  <div className="children">
+      <NavBar />
+      <div className="children">
         {children}
       </div>  
-	  <Footer />
-	</PageContainer>
+      <Footer />
+    </PageContainer>
   </div>
 );
 

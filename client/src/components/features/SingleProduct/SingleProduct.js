@@ -21,7 +21,7 @@ class SingleProduct extends React.Component {
 
   render() {
     const { product, request } = this.props;
-	 
+   
     if (!request.pending && request.success && product) 
         return (
           <article className="single-product">
@@ -36,7 +36,7 @@ class SingleProduct extends React.Component {
               <br/><br/><button onClick={this.addToCart}>Add to cart</button>  
             </div>
           </article>
-    		);
+        );
     if (request.pending || request.success === null)
         return <Spinner />;
     if (!request.pending && request.error !== null && request.error !== undefined)
@@ -53,7 +53,7 @@ SingleProduct.propTypes = {
     id: PropTypes.string.isRequired,
     extraInfo: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
-	  author: PropTypes.string.isRequired,
+    author: PropTypes.string.isRequired,
     image: PropTypes.string,
     description: PropTypes.string.isRequired,
     price: PropTypes.number.isRequired,
