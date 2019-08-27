@@ -18,10 +18,9 @@ app.use(express.json());
 app.use('/api', productRoutes);
 // app.use(sanitize);
 // Serve static files from the React app
-console.log(__dirname)
-app.use(express.static(path.join(__dirname, '/client/build')));
+app.use(express.static(path.join(__dirname, '/../../client/build')));
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '/client/build/index.html'));
+  res.sendFile(path.join(__dirname, '/../../client/build/index.html'));
 });
 
 // connects our back end code with the database

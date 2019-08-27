@@ -1,5 +1,6 @@
 const Product = require('./models/product.model');
 const fs = require('fs');
+const path = require('path');
 
 const loadTestData = async () => {
 
@@ -224,12 +225,11 @@ const loadTestData = async () => {
   ];
 
   try {
-    console.log(__dirname);
     let counter = await Product.countDocuments();
     if (counter === 0) {
       console.log('No products. Loading data...');
       for (let book of data) {
-        book.image = fs.readFileSync('resources/images/' + book.imageFile).toString('base64');
+        book.image = fs.readFileSync(path.join(__dirname, '/resources/images/', book.imageFile)).toString('base64');
       }
       await Product.create(data);
       console.log('Test data has been successfully loaded');
