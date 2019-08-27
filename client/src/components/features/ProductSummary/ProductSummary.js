@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { PropTypes } from 'prop-types';
-import {ToastsContainer, ToastsStore, ToastsContainerPosition} from 'react-toasts';
+import { ToastsStore } from 'react-toasts';
 import './ProductSummary.scss';
 
 import SmallTitle from '../../common/SmallTitle/SmallTitle';
