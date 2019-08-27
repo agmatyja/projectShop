@@ -2,7 +2,7 @@ import React from 'react';
 import { PropTypes } from 'prop-types';
 import './ProductsList.scss';
 
-
+import ProductInCart from '../ProductInCart/ProductInCart';
 import ProductSummary from '../ProductSummary/ProductSummary';
 
 class ProductsList extends React.Component {
@@ -13,9 +13,16 @@ class ProductsList extends React.Component {
       <div>
         <section className="products-list">
           {products.map(product => 
-            <ProductSummary 
+            inCart
+            ? <ProductInCart 
               key={product.id} 
-              inCart={inCart} 
+              addCartProduct={addCartProduct} 
+              removeCartProduct={removeCartProduct} 
+              deleteCartProduct={deleteCartProduct} 
+              {...product} 
+            />
+            : <ProductSummary 
+              key={product.id} 
               addCartProduct={addCartProduct} 
               removeCartProduct={removeCartProduct} 
               deleteCartProduct={deleteCartProduct} 

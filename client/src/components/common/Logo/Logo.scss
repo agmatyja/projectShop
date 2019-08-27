@@ -5,4 +5,7 @@
   font-size: $base-size * 2;
   color: #fff;
   margin-top: 10px;
+  @media (max-width:580px) {
+  	display: none;
+  }
 }

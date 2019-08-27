@@ -1,25 +1,24 @@
 @import '../../../styles/settings.scss';
 
-.product-summary {
+.product-in-cart {
     border-bottom: 1px solid $color-textfield-border;
     padding: 20px;
     margin-top: 50px;
-    margin-left: 10px;
-    margin-right: 50px;
+    margin-left: 0;
+    margin-right: 0;
     margin-bottom: 30px;
     transition: .2s;
     cursor: pointer;
     width: 100%;
-    max-width: 600px;
     display: inline-block;
     border-radius: 2%;
     box-shadow: 0 0 20px rgba(0,0,0,0.3);
     text-align: left;
-    height: 540px;
     background: rgba(255,255,255,0.3);
 
     img {
-        height: 500px;
+        height: 200px;
+        padding-right: 20px;
     }
 
     .delete-button {
@@ -28,19 +27,17 @@
     }
 
     a {
-        display:flex;
-        height: 100%;
+        display: flex;
     }
 
     .first {
-        flex: 2;
+        flex: 1;
         display: inline-block;
     }
 
     .second {
-        flex: 1;
+        flex: 10;
         display: inline-block;
-        height: 100%;
     }
 
     .html-box {
@@ -49,20 +46,13 @@
         text-overflow: ellipsis;
         display: inline-block;
     }
-}
-.relat {
-    position: relative;
-}
 
-.extra {
-    text-align: right;
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-weight: bold;
-    color: hotpink;
-    height: 30px;
-    width: 100px;
-    padding: 5px auto;
-}
+    .price {
+        margin-bottom: 0;
+    }
 
+    .quantity, .delete-button {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
