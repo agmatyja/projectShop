@@ -27,7 +27,8 @@ class SingleProduct extends React.Component {
           <article className="single-product">
             <div className="first"><img src={`data:image/jpeg;base64,${product.image}`} alt="cover"/></div>
             <div className="second">
-              <h2>{product.title}</h2><h2>{product.extraInfo}</h2>
+              <h2>{product.title}</h2>
+              <h2>{product.extraInfo}</h2>
               <b>{product.author}</b><br/>
               <br/>
               <HtmlBox>{product.description.replace(/\n/g,"<br />")}</HtmlBox>

@@ -2,28 +2,57 @@
 
 .product-summary {
     border-bottom: 1px solid $color-textfield-border;
-    padding: $base-size;
-    margin-top: $base-size;
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-bottom: $base-size;
+    padding: 20px;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 30px;
     transition: .2s;
     cursor: pointer;
-    width: 40%;
-    height: 25%;
+    width: 100%;
+    max-width: 600px;
     display: inline-block;
+    border-radius: $radius;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    text-align: left;
+
+    img {
+        height: 500px;
+    }
 
     .delete-button {
         color: hotpink;
         margin: 15px auto;
     }
+    a {
+        display:flex;
+    }
 
-    &:hover {
-        border-radius: $radius;
-        box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    .first {
+        flex: 2;
+        display: inline-block;
+    }
+
+    .second {
+        flex: 1;
+        display: inline-block;
     }
 }
-
-.price {
-    
+.relat {
+    position:relative;
+    height: 600px;
+    background: rgba(255,255,255,0.3);
 }
+
+.extra {
+    text-align: right;
+    position: absolute;
+    top: 0;
+    right: 20px;
+    font-weight: bold;
+    color: hotpink;
+    height:30px;
+    width:100px;
+    padding: 5px auto;
+}
+

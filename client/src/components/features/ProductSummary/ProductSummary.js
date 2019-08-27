@@ -7,14 +7,18 @@ import Button from '../../common/Button/Button';
 import SmallTitle from '../../common/SmallTitle/SmallTitle';
 
 const ProductSummary = ({ id, title, author, description, image, quantity, extraInfo, price, inCart, addCartProduct, removeCartProduct, deleteCartProduct }) => (
-  <article className="product-summary">
+  <article className="product-summary relat">
     <Link to={"/products/" + id}>
-      <p className="extra">{extraInfo}</p><br/>
-      <img src={`data:image/jpeg;base64,${image}`} alt="cover" />
-      <SmallTitle>{title}</SmallTitle>
-  	  <p>Author: {author}</p>
-      {inCart ? <p className="description">{description}<br /></p> : null}
-      <p className="price">Price: ${price}</p>
+      <div className="first">
+        <img src={`data:image/jpeg;base64,${image}`} alt="cover" />
+        <p className="extra">{extraInfo}</p><br/>
+      </div>
+      <div className="second">
+        <SmallTitle>{title}</SmallTitle>
+  	    <p>Author: {author}</p>
+        {inCart ? <p className="description">{description}<br /></p> : null}
+        <p className="price">Price: ${price}</p>
+      </div>
     </Link>
     {inCart
       ? <p>

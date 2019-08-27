@@ -6,7 +6,7 @@ const loadTestData = async () => {
   const data = [
     {
       id: 'b1',
-      extraInfo: '',
+      extraInfo: 'NEW',
       title: 'An evil mind',
 	    author: "Chris Carter",
       lastName: "Carter",
@@ -22,7 +22,7 @@ const loadTestData = async () => {
     },
     {
       id: 'b2',
-      extraInfo: '',
+      extraInfo: 'SALE',
       title: '17th suspect',
 	    author: "James Patterson & Maxine Paetro",
       lastName: "Patterson",
@@ -39,7 +39,7 @@ const loadTestData = async () => {
     },
     {
       id: 'b3',
-      extraInfo: '',
+      extraInfo: 'BESTSELLER',
       title: 'The hitchhikers guide to the galaxy',
       author: "Douglas Adams",
       lastName: "Adams",
