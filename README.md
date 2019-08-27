@@ -14,13 +14,13 @@ If absent, "mongodb://localhost:27017/bookstore" and "8000" respectively are use
 
 ## Running locally
 yarn install
-yarn start-dev
+yarn run start-dev
 
 ## Demo on the server
 [Link](https://poe-bookstore.herokuapp.com/)
 
 Before pushing to Heroku run:
-yarn build-client
+yarn run build-client
 
 ## Discount code
 Code for 10% discount is "promo".

@@ -11,7 +11,7 @@
     "start:client": "cd client && yarn start",
     "install:server": "cd server && yarn install",
     "install:client": "cd client && yarn install",
-    "build-client": "cd client && yarn build",
+    "build-client": "cd client && yarn run build",
     "postinstall": "npm-run-all -p install:*"
   },
   "author": "Agnieszka Matyja",
