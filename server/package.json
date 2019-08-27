@@ -7,9 +7,12 @@
     "cors": "2.8.5",
     "express": "4.17.0",
     "mongoose": "5.5.11",
-    "nodemon": "1.19.1"
+    "nodemon": "1.19.1",
+    "helmet": "3.18.0",
+    "mongo-sanitize": "^1.0.1",
+    "uuid": "3.3.2"
   },
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "nodemon src/server.js"
   }
 }
