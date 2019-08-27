@@ -54,7 +54,7 @@ const loadTestData = async () => {
     {
       id: 'b4',
       extraInfo: '',
-      title: 'The bad begining',
+      title: 'The bad beginning',
       author: "Lemony Snicket",
       lastName: "Snicket",
       imageFile: 'book4.jpg',

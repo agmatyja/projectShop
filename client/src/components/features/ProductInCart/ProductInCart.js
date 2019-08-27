@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { PropTypes } from 'prop-types';
-import HtmlBox from '../../common/HtmlBox/HtmlBox';
 import './ProductInCart.scss';
 import cutText from '../../../utils/cutText';
 

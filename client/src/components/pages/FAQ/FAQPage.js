@@ -6,6 +6,10 @@ const FAQPage = () => (
     <h1>Frequently Asked Questions</h1>
 
     <p>
+    The discount code is "promo" :-)
+    </p>
+
+    <p>
     Lorem ipsum dolor sit amet? 
     Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
 
