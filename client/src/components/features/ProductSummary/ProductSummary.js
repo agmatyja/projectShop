@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { PropTypes } from 'prop-types';
+import {ToastsContainer, ToastsStore, ToastsContainerPosition} from 'react-toasts';
 import './ProductSummary.scss';
 
 import SmallTitle from '../../common/SmallTitle/SmallTitle';
@@ -20,6 +21,7 @@ const ProductSummary = ({ id, title, author, description, image, quantity, extra
           {quantity > 0 ? <p className="quantity">Quantity: {quantity}</p> : null}
         </div>
       </Link>
+      {quantity === 0 ? <button onClick={() => {addCartProduct(id); ToastsStore.warning('Item added to the cart.');}} className="addToCart">Add to cart</button> : null}
     </article>
   );
 };

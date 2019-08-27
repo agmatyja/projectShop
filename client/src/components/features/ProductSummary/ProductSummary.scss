@@ -1,6 +1,7 @@
 @import '../../../styles/settings.scss';
 
 .product-summary {
+    position: relative;
     border-bottom: 1px solid $color-textfield-border;
     padding: 20px;
     margin-top: 50px;
@@ -40,8 +41,8 @@
 
     .second {
         display: inline-block;
-        height: 100%;
         width: 240px;
+        position: relative;
     }
 
     .html-box {
@@ -54,21 +55,36 @@
     &.bought {
         filter: brightness(50%);
     }
-}
 
-.relat {
-    position: relative;
-}
+    .addToCart {
+        position: absolute;
+        color: #fff;
+        background: #16a085;
+        bottom: 25px;
+        right: 25px;
+        width: 150px;
+        height: 40px;
+        font-size: 22px;
+        float: right;
+        border-radius: 35%;
+        &:focus {
+            outline: none;
+        }
+    }
 
-.extra {
-    text-align: right;
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-weight: bold;
-    color: hotpink;
-    height: 30px;
-    width: 100px;
-    padding: 5px auto;
-}
+    .relat {
+        position: relative;
+    }
 
+    .extra {
+        text-align: right;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        font-weight: bold;
+        color: hotpink;
+        height: 30px;
+        width: 100px;
+        padding: 5px auto;
+    }
+}

@@ -42,5 +42,20 @@
     .price {
         font-size: 22px;
     }
+    .relat {
+        position: relative;
+    }
+
+    .extra {
+        text-align: right;
+        position: absolute;
+        top: 50px;
+        right: 47px;
+        font-weight: bold;
+        color: hotpink;
+        height: 30px;
+        width: 100px;
+        padding: 5px auto;
+    }
 }
 
