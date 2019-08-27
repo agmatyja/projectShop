@@ -10,14 +10,17 @@ Agnieszka Matyja
 
 ## Environtment variables
 Server is using environment variables DB and PORT to connect to the database.
-If absent, "mongodb://localhost:27017/bookstore" and "8000" are used.
+If absent, "mongodb://localhost:27017/bookstore" and "8000" respectively are used.
 
 ## Running locally
 yarn install
-yarn start
+yarn start-dev
 
 ## Demo on the server
 [Link](https://poe-bookstore.herokuapp.com/)
+
+Before pushing to Heroku run:
+yarn build-client
 
 ## Discount code
 Code for 10% discount is "promo".
