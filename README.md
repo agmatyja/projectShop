@@ -19,9 +19,10 @@ yarn run start-dev
 ## Demo on the server
 [Link](https://poe-bookstore.herokuapp.com/)
 
-Before pushing to Heroku:
+## Discount code
+Code for 10% discount is "promo".
+
+## Before pushing to Heroku
 - change API_URL in client/config.js
 - yarn run build-client
 
-## Discount code
-Code for 10% discount is "promo".
