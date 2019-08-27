@@ -16,5 +16,8 @@ If absent, "mongodb://localhost:27017/bookstore" and "8000" are used.
 yarn install
 yarn start
 
+## Demo on the server
+[Link](https://poe-bookstore.herokuapp.com/)
+
 ## Discount code
 Code for 10% discount is "promo".
